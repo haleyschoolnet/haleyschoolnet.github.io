@@ -1,1 +1,231 @@
-1
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayZone - Kho Game Khổng Lồ, Chơi Ngay Không Cần Cài Đặt</title>
+    <meta name="description" content="Khám phá hàng vạn trò chơi miễn phí đủ mọi thể loại: Hành động, Trí tuệ, Đua xe, Game Bạn Gái. Cập nhật game nóng hổi mỗi ngày!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-gamepad"></i> PlayZone
+            </div>
+            
+            <div class="search-wrapper">
+                <div class="search-bar">
+                    <input type="text" placeholder="Tìm tên game, thể loại (VD: Bắn súng, Đua xe...)">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <!-- Search Suggestions -->
+                    <div class="search-suggestions">
+                        <div class="sugg-title">Tìm kiếm phổ biến</div>
+                        <a href="#"><i class="fa-solid fa-fire"></i> Lửa và Nước</a>
+                        <a href="#"><i class="fa-solid fa-gamepad"></i> Minecraft Sinh Tồn</a>
+                        <a href="#"><i class="fa-solid fa-car"></i> Đua Xe Địa Hình</a>
+                        <a href="#"><i class="fa-solid fa-skull"></i> Bắn Zombie</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-links">
+                <a href="#"><i class="fa-solid fa-bell"></i> Thông báo <span class="badge-dot"></span></a>
+                <a href="#"><i class="fa-solid fa-bookmark"></i> Vừa chơi</a>
+                <a href="#" class="btn-login"><i class="fa-solid fa-user"></i> Hồ sơ của tôi</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Layout Container -->
+    <div class="layout-wrapper">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-menu">
+                <h4 class="menu-title">Khám Phá</h4>
+                <a href="#" class="menu-item active"><i class="fa-solid fa-house"></i> Trang Chủ</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-fire-flame-curved"></i> Đang Thịnh Hành</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-bolt"></i> Mới Phát Hành</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-trophy"></i> Bảng Xếp Hạng</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-dice"></i> Chơi Ngẫu Nhiên</a>
+
+                <h4 class="menu-title mt-4">Thể Loại Trò Chơi</h4>
+                <div class="grid-menu">
+                    <a href="#" class="grid-item">
+                        <div class="icon-box" style="background:#ff5252"><i class="fa-solid fa-gun"></i></div>
+                        <span>Hành Động</span>
+                    </a>
+                    <a href="#" class="grid-item">
+                        <div class="icon-box" style="background:#448aff"><i class="fa-solid fa-puzzle-piece"></i></div>
+                        <span>Trí Tuệ</span>
+                    </a>
+                    <a href="#" class="grid-item">
+                        <div class="icon-box" style="background:#ffb300"><i class="fa-solid fa-car"></i></div>
+                        <span>Đua Xe</span>
+                    </a>
+                    <a href="#" class="grid-item">
+                        <div class="icon-box" style="background:#69f0ae"><i class="fa-solid fa-futbol"></i></div>
+                        <span>Thể Thao</span>
+                    </a>
+                    <a href="#" class="grid-item">
+                        <div class="icon-box" style="background:#e040fb"><i class="fa-solid fa-heart"></i></div>
+                        <span>Bạn Gái</span>
+                    </a>
+                    <a href="#" class="grid-item">
+                        <div class="icon-box" style="background:#ff6e40"><i class="fa-solid fa-kitchen-set"></i></div>
+                        <span>Nấu Ăn</span>
+                    </a>
+                    <a href="#" class="grid-item">
+                        <div class="icon-box" style="background:#18ffff"><i class="fa-solid fa-users"></i></div>
+                        <span>2 Người</span>
+                    </a>
+                    <a href="#" class="grid-item">
+                        <div class="icon-box" style="background:#bcaaa4"><i class="fa-solid fa-chess-knight"></i></div>
+                        <span>Chiến Thuật</span>
+                    </a>
+                    <a href="#" class="grid-item">
+                        <div class="icon-box" style="background:#4caf50"><i class="fa-solid fa-ghost"></i></div>
+                        <span>Kinh Dị</span>
+                    </a>
+                    <a href="#" class="grid-item">
+                        <div class="icon-box" style="background:#ff9800"><i class="fa-solid fa-coins"></i></div>
+                        <span>Arcade</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content (Game Grids) -->
+        <main class="main-content">
+            
+            <!-- Quick Tags Horizontal Scroll -->
+            <div class="quick-tags">
+                <a href="#" class="tag">#BắnSúng3D</a>
+                <a href="#" class="tag">#KhủngLong</a>
+                <a href="#" class="tag">#SinhTồn</a>
+                <a href="#" class="tag">#TiệmBánh</a>
+                <a href="#" class="tag">#Zombies</a>
+                <a href="#" class="tag">#Ninja</a>
+                <a href="#" class="tag">#Bida</a>
+                <a href="#" class="tag">#CờVua</a>
+                <a href="#" class="tag">#ThờiTrang</a>
+                <a href="#" class="tag">#PokiStyle</a>
+            </div>
+
+            <!-- Section 1: Hero / Featured -->
+            <section class="game-section">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-star" style="color:#ffb300"></i> Lựa Chọn Dành Cho Bạn</h2>
+                    <a href="#" class="view-all">Xem tất cả <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+                
+                <div id="hero-grid-container" class="game-grid hero-grid">
+                    <!-- Vẽ tự động qua app.js -->
+                </div>
+            </section>
+
+            <!-- Section 2: Intense Dense Grid -->
+            <section class="game-section">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-bolt" style="color:#ff5252"></i> Trò Chơi Mới Mỗi Ngày</h2>
+                    <a href="#" class="view-all">Xem tất cả 1.250 game mới <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+                
+                <div id="dense-grid-container" class="game-grid dense-grid">
+                    <!-- Vẽ tự động qua app.js -->
+                </div>
+            </section>
+
+            <!-- Section 3: 2 Player Games -->
+            <section class="game-section">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-user-friends" style="color:#00e676"></i> Chơi Cùng Bạn Bè - Game 2 Người</h2>
+                </div>
+                
+                <div id="two-player-grid-container" class="game-grid duel-grid">
+                    <!-- Vẽ tự động qua app.js -->
+                </div>
+            </section>
+
+             <!-- Section 4: Sports Games -->
+             <section class="game-section">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-futbol" style="color:#2196f3"></i> Thử Thách Thể Thao</h2>
+                </div>
+                
+                <div id="sports-grid-container" class="game-grid dense-grid">
+                    <!-- Vẽ tự động qua app.js -->
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-main-info">
+                <h3><i class="fa-solid fa-gamepad"></i> PlayZone</h3>
+                <p>Nền tảng giải trí trực tuyến hàng đầu, hội tụ hơn 10.000+ trò chơi chất lượng cao. Chơi ngay trên trình duyệt, không cần tải về.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="link-col">
+                    <h4>Thể Loại</h4>
+                    <a href="#">Hành Động</a>
+                    <a href="#">Bạn Gái</a>
+                    <a href="#">Đua Xe</a>
+                    <a href="#">Chiến Thuật</a>
+                </div>
+                <div class="link-col">
+                    <h4>Về PlayZone</h4>
+                    <a href="#">Điều Khoản Sử Dụng</a>
+                    <a href="#">Chính Sách Bảo Mật</a>
+                    <a href="#">Liên Hệ & Xóa Game</a>
+                    <a href="#">Nhà Phát Triển</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 PlayZone Game Studio. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactions -->
+    <script>
+        const searchInput = document.querySelector(".search-bar input");
+        const suggestionsBox = document.querySelector(".search-suggestions");
+        const searchBar = document.querySelector(".search-bar");
+
+        searchInput.addEventListener("focus", () => {
+            searchBar.classList.add("focused");
+            suggestionsBox.style.display = "block";
+        });
+
+        document.addEventListener('click', function(event) {
+            const isClickInside = searchBar.contains(event.target);
+            if (!isClickInside) {
+                searchBar.classList.remove("focused");
+                suggestionsBox.style.display = "none";
+            }
+        });
+
+        const menuItems = document.querySelectorAll(".menu-item");
+        menuItems.forEach(item => {
+            item.addEventListener("click", function(e) {
+                e.preventDefault();
+                menuItems.forEach(i => i.classList.remove("active"));
+                this.classList.add("active");
+            });
+        });
+    </script>
+
+    <!-- Load Data and Dynamic Rendering -->
+    <script src="games.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

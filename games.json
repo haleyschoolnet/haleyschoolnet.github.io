@@ -1,0 +1,46 @@
+[
+    {
+        "name": "Cyber Racing 2077",
+        "logo": "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop",
+        "iframe": "https://example.com/game1",
+        "section": "hero",
+        "category": "featured",
+        "type": "hero-card",
+        "badge": "Hot"
+    },
+    {
+        "name": "Neon Runner",
+        "logo": "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?q=80&w=600&auto=format&fit=crop",
+        "iframe": "https://example.com/game2",
+        "section": "dense",
+        "category": "trending"
+    },
+    {
+        "name": "Fire & Water 5",
+        "logo": "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?q=80&w=400&auto=format&fit=crop",
+        "iframe": "https://example.com/game4",
+        "section": "dense",
+        "category": "two-player"
+    },
+    {
+        "name": "Extreme Goal",
+        "logo": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=400&auto=format&fit=crop",
+        "iframe": "https://example.com/game5",
+        "section": "dense",
+        "category": "sports"
+    },
+    {
+        "name": "Super Mario Run",
+        "logo": "https://images.unsplash.com/photo-1580234797602-22c37b4a6217?q=80&w=400&auto=format&fit=crop",
+        "iframe": "https://example.com/game3",
+        "section": "dense",
+        "category": "trending"
+    },
+    {
+        "__NOTE__": "HƯỚNG DẪN CẤU HÌNH",
+        "category_options": "featured (Nổi bật), trending (Xu hướng), two-player (2 người), sports (Thể thao)",
+        "section_options": "hero (Thẻ to có chữ bên dưới), dense (Thẻ nhỏ vuông vắn)",
+        "type_options": "hero-card (Rất to), block-card (To vừa), vertical-card (Dọc), square-card (Vuông), small-square (Nhỏ)",
+        "badge_options": "Nhập chữ bất kỳ để hiện nhãn góc card (VD: 'New', 'Hot', '-50%')"
+    }
+]

@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Rooms</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        background: white;
+      }
+
+      .container {
+        max-width: 100%;
+        margin: 0;
+        background-color: white;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 20px;
+      }
+
+      .header {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+      }
+
+      .header h1 {
+        margin: 0;
+        font-size: 32px;
+        text-shadow: none;
+      }
+
+      .search-section {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .search-section input {
+        flex-grow: 1;
+        padding: 12px 20px;
+        border: 2px solid #eee;
+        border-radius: 25px;
+        outline: none;
+        font-size: 16px;
+        transition: border-color 0.3s;
+      }
+
+      .search-section input:focus {
+        border-color: #667eea;
+      }
+
+      .create-room {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 12px 25px;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .create-room:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .rooms-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+      }
+
+      .room-card {
+        background: white;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+
+      .room-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .room-card h3 {
+        margin: 0 0 10px 0;
+        color: #333;
+        padding-right: 80px; /* Để tránh chồng lấn với nút xóa */
+      }
+
+      .room-card p {
+        margin: 0;
+        color: #666;
+        font-size: 14px;
+        flex-grow: 1;
+      }
+
+      .room-stats {
+        display: flex;
+        gap: 15px;
+        margin: 15px 0;
+        font-size: 14px;
+        color: #888;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-content {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        width: 90%;
+        max-width: 500px;
+      }
+
+      .modal-content h2 {
+        margin: 0 0 20px 0;
+        color: #333;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #666;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #eee;
+        border-radius: 10px;
+        outline: none;
+        transition: border-color 0.3s;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        border-color: #667eea;
+      }
+
+      .modal-buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+      }
+
+      .modal-buttons button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-weight: 600;
+      }
+
+      .cancel-btn {
+        background: #eee;
+        color: #666;
+      }
+
+      .create-btn {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+      }
+
+      .cancel-btn:hover,
+      .create-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 10px;
+        }
+
+        .rooms-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .delete-btn {
+        background: #e53e3e;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 6px 12px;
+        cursor: pointer;
+        transition: all 0.2s;
+        font-size: 12px;
+        margin-top: 10px;
+        display: inline-block;
+        width: auto;
+        text-align: center;
+        align-self: flex-end;
+      }
+
+      .delete-btn:hover {
+        background: #c53030;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .delete-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+
+      .delete-modal-content {
+        background: white;
+        padding: 24px;
+        border-radius: 16px;
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+      }
+
+      .delete-modal-content h3 {
+        margin: 0 0 16px 0;
+        color: #2d3748;
+      }
+
+      .delete-modal-content p {
+        margin: 0 0 24px 0;
+        color: #4a5568;
+      }
+
+      .delete-modal-buttons {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+      }
+
+      .delete-modal-buttons button {
+        padding: 8px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.2s;
+      }
+
+      .delete-cancel-btn {
+        background: #e2e8f0;
+        color: #4a5568;
+      }
+
+      .delete-confirm-btn {
+        background: #e53e3e;
+        color: white;
+      }
+
+      .delete-cancel-btn:hover,
+      .delete-confirm-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .room-actions {
+        display: flex;
+        gap: 8px;
+        margin-top: 10px;
+        align-self: flex-end;
+      }
+
+      .pin-btn {
+        background: #4299e1;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 6px 12px;
+        cursor: pointer;
+        transition: all 0.2s;
+        font-size: 12px;
+        text-align: center;
+      }
+
+      .pin-btn:hover {
+        background: #3182ce;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .pin-btn.pinned {
+        background: #2b6cb0;
+      }
+
+      .pin-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+
+      .pin-modal-content {
+        background: white;
+        padding: 24px;
+        border-radius: 16px;
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+      }
+
+      .pin-modal-content h3 {
+        margin: 0 0 16px 0;
+        color: #2d3748;
+      }
+
+      .pin-modal-content p {
+        margin: 0 0 24px 0;
+        color: #4a5568;
+      }
+
+      .pin-modal-buttons {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+      }
+
+      .pin-modal-buttons button {
+        padding: 8px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.2s;
+      }
+
+      .pin-cancel-btn {
+        background: #e2e8f0;
+        color: #4a5568;
+      }
+
+      .pin-confirm-btn {
+        background: #4299e1;
+        color: white;
+      }
+
+      .pin-cancel-btn:hover,
+      .pin-confirm-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .room-card .private-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+      }
+
+      .private-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+      }
+
+      .admin-label {
+        font-weight: 500;
+        color: #1a237e;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        line-height: 0.5;
+        margin: 0;
+        font-style: italic;
+      }
+
+      .admin-text {
+        font-weight: 700;
+        color: #000000;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background: linear-gradient(45deg, #000000, #000000);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: glow 2s ease-in-out infinite;
+      }
+
+      .admin-icon {
+        display: inline-block;
+        animation: float 2s ease-in-out infinite;
+      }
+
+      @keyframes glow {
+        0%,
+        100% {
+          text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+        }
+        50% {
+          text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 style="margin-bottom: 2px; margin-top: 5px">Chat Rooms</h1>
+        <p class="admin-label" style="margin-top: 5px">
+          Wellcome to my private chat rooms!
+        </p>
+      </div>
+      <div class="search-section">
+        <input type="text" id="searchInput" placeholder="Search for rooms..." />
+        <button class="create-room" onclick="showCreateModal()">
+          Create Room
+        </button>
+      </div>
+      <div class="rooms-grid" id="roomsGrid">
+        <!-- Rooms will be added here dynamically -->
+      </div>
+    </div>
+
+    <!-- Create Room Modal -->
+    <div class="modal" id="createModal">
+      <div class="modal-content">
+        <h2>Create New Chat Room</h2>
+        <div class="form-group">
+          <label for="roomName">Room Name</label>
+          <input type="text" id="roomName" placeholder="Enter room name" />
+        </div>
+        <div class="form-group">
+          <label for="roomDescription">Description</label>
+          <textarea
+            id="roomDescription"
+            rows="3"
+            placeholder="Describe your chat room"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="roomPassword">Password (optional)</label>
+          <input
+            type="password"
+            id="roomPassword"
+            placeholder="Enter password if desired"
+          />
+        </div>
+        <div class="modal-buttons">
+          <button class="cancel-btn" onclick="hideCreateModal()">Cancel</button>
+          <button class="create-btn" onclick="createRoom()">Create</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div class="delete-modal" id="deleteModal">
+      <div class="delete-modal-content">
+        <h3>Confirm delete room</h3>
+        <p>Please enter password to confirm delete room:</p>
+        <div class="form-group">
+          <input
+            type="password"
+            id="deletePassword"
+            placeholder="Enter password"
+          />
+        </div>
+        <div class="delete-modal-buttons">
+          <button class="delete-cancel-btn" onclick="hideDeleteModal()">
+            Cancel
+          </button>
+          <button
+            class="delete-confirm-btn"
+            onclick="verifyPassword()"
+            id="confirmDeleteBtn"
+            style="display: none"
+          >
+            Confirm delete
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pin Modal -->
+    <div class="pin-modal" id="pinModal">
+      <div class="pin-modal-content">
+        <h3>Confirm <span id="pinActionText">pin</span> room</h3>
+        <p>Please enter password to confirm:</p>
+        <div class="form-group">
+          <input
+            type="password"
+            id="pinPassword"
+            placeholder="Enter password"
+          />
+        </div>
+        <div class="pin-modal-buttons">
+          <button class="pin-cancel-btn" onclick="hidePinModal()">
+            Cancel
+          </button>
+          <button
+            class="pin-confirm-btn"
+            onclick="verifyPinPassword()"
+            id="confirmPinBtn"
+            style="display: none"
+          >
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Password Modal -->
+    <div class="modal" id="passwordModal">
+      <div class="modal-content">
+        <h2>Protected Room</h2>
+        <div class="form-group">
+          <label for="enterPassword">Enter Password</label>
+          <input
+            type="password"
+            id="enterPassword"
+            placeholder="Enter room password"
+          />
+        </div>
+        <div class="modal-buttons">
+          <button class="cancel-btn" onclick="hidePasswordModal()">
+            Cancel
+          </button>
+          <button class="create-btn" onclick="verifyRoomPassword()">
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+      import { database } from "./firebase-config.js";
+      import {
+        ref,
+        push,
+        onValue,
+        set,
+        remove,
+        get,
+      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js";
+
+      const roomsGrid = document.getElementById("roomsGrid");
+      const searchInput = document.getElementById("searchInput");
+      const createModal = document.getElementById("createModal");
+      const deleteModal = document.getElementById("deleteModal");
+      const pinModal = document.getElementById("pinModal");
+      const passwordModal = document.getElementById("passwordModal");
+      let roomToDelete = null;
+      let roomToPin = null;
+      let currentPinState = false;
+      let selectedRoomId = null;
+
+      // Danh sách các từ ngữ bị cấm
+      const BANNED_WORDS = [
+        // Profanity & Swear words
+        "fuck",
+        "shit",
+        "damn",
+        "bitch",
+        "asshole",
+        "bastard",
+        "cunt",
+        "dick",
+        "pussy",
+        "whore",
+
+        // Racial slurs
+        "nigger",
+        "nigga",
+        "chink",
+        "gook",
+        "wetback",
+        "kike",
+        "spic",
+        "coon",
+        "zipperhead",
+        "towelhead",
+
+        // Sexual harassment
+        "rape",
+        "molest",
+        "fap",
+        "masturbate",
+
+        // Hate speech
+        "nazi",
+        "faggot",
+        "retard",
+        "autism",
+      ];
+
+      // Hàm kiểm tra nội dung có chứa từ cấm không
+      function containsBannedWords(text) {
+        if (!text) return false;
+        text = text.toLowerCase();
+
+        // Kiểm tra cả từ gốc và biến thể
+        return BANNED_WORDS.some((word) => {
+          const regex = new RegExp(
+            word.split("").join("[^a-zA-Z0-9]*"), // Match kể cả khi chèn ký tự đặc biệt
+            "i"
+          );
+          return regex.test(text);
+        });
+      }
+
+      // Lắng nghe thay đổi trong danh sách phòng
+      if (!database) {
+        console.error(
+          "❌ Database not initialized. Please check Firebase configuration."
+        );
+        roomsGrid.innerHTML =
+          '<div style="padding: 20px; text-align: center; color: #ff6b6b;"><p>⚠️ Error: Database not initialized. Please refresh the page.</p></div>';
+      } else {
+        onValue(
+          ref(database, "rooms"),
+          (snapshot) => {
+            const rooms = snapshot.val() || {};
+            displayRooms(rooms);
+          },
+          (error) => {
+            console.error("❌ Error listening to rooms:", error);
+            roomsGrid.innerHTML =
+              '<div style="padding: 20px; text-align: center; color: #ff6b6b;"><p>⚠️ Error loading rooms. Please check your connection.</p></div>';
+          }
+        );
+      }
+
+      // Hiển thị danh sách phòng
+      function displayRooms(rooms) {
+        roomsGrid.innerHTML = "";
+        // Sort rooms by pin status
+        const sortedRooms = Object.entries(rooms).sort((a, b) => {
+          const aPinned = a[1].isPinned || false;
+          const bPinned = b[1].isPinned || false;
+          if (aPinned === bPinned) return 0;
+          return aPinned ? -1 : 1;
+        });
+
+        sortedRooms.forEach(([roomId, room]) => {
+          const roomCard = document.createElement("div");
+          roomCard.className = "room-card";
+          roomCard.innerHTML = `
+                    ${
+                      room.hasPassword
+                        ? '<span class="private-icon">🔒</span>'
+                        : ""
+                    }
+                    <h3>${room.name}</h3>
+                    <p>${room.description || "No description"}</p>
+                    <div class="room-stats">
+                        <span>💬 ${room.messageCount || 0} messages</span>
+                    </div>
+                    <div class="room-actions">
+                        <button class="pin-btn ${
+                          room.isPinned ? "pinned" : ""
+                        }" onclick="showPinModal('${roomId}', ${
+            room.isPinned || false
+          })">
+                            ${room.isPinned ? "Unpin" : "Pin"}
+                        </button>
+                        <button class="delete-btn" onclick="showDeleteModal('${roomId}', '${
+            room.name
+          }')">Delete room</button>
+                    </div>
+                `;
+          roomCard.onclick = (e) => {
+            if (
+              !e.target.classList.contains("delete-btn") &&
+              !e.target.classList.contains("pin-btn")
+            ) {
+              if (room.hasPassword) {
+                showPasswordModal(roomId);
+              } else {
+                window.location.href = `2.html?room=${roomId}`;
+              }
+            }
+          };
+          roomsGrid.appendChild(roomCard);
+        });
+      }
+
+      // Tìm kiếm phòng
+      searchInput.addEventListener("input", (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        const roomCards = roomsGrid.getElementsByClassName("room-card");
+
+        Array.from(roomCards).forEach((card) => {
+          const roomName = card.querySelector("h3").textContent.toLowerCase();
+          const roomDesc = card.querySelector("p").textContent.toLowerCase();
+
+          if (roomName.includes(searchTerm) || roomDesc.includes(searchTerm)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+
+      // Hiển thị modal tạo phòng
+      window.showCreateModal = function () {
+        createModal.style.display = "flex";
+      };
+
+      // Ẩn modal tạo phòng
+      window.hideCreateModal = function () {
+        createModal.style.display = "none";
+      };
+
+      // Tạo phòng mới với cấu trúc đầy đủ
+      window.createRoom = async function () {
+        const name = document.getElementById("roomName").value.trim();
+        const description = document
+          .getElementById("roomDescription")
+          .value.trim();
+        const password = document.getElementById("roomPassword").value.trim();
+
+        // Kiểm tra tên phòng và mô tả
+        if (containsBannedWords(name) || containsBannedWords(description)) {
+          alert("Room name or description contains inappropriate words!");
+          return;
+        }
+
+        if (name) {
+          try {
+            const roomData = {
+              name: name,
+              description: description,
+              timestamp: Date.now(),
+              messageCount: 0,
+              userCount: 0,
+              hasPassword: Boolean(password),
+              password: password || "",
+              messages: {},
+              // Thêm rules cho phòng
+              rules: {
+                bannedWords: true, // Bật tính năng lọc từ
+              },
+            };
+
+            const newRoomRef = push(ref(database, "rooms"));
+            await set(newRoomRef, roomData);
+
+            hideCreateModal();
+            // Clear form
+            document.getElementById("roomName").value = "";
+            document.getElementById("roomDescription").value = "";
+            document.getElementById("roomPassword").value = "";
+          } catch (error) {
+            console.error("Error creating room:", error);
+            alert("Error occurred while creating room!");
+          }
+        }
+      };
+
+      // Xử lý khi click vào phòng
+      window.handleRoomClick = function (roomId, hasPassword) {
+        if (hasPassword) {
+          showPasswordModal(roomId);
+        } else {
+          window.location.href = `2.html?room=${roomId}`;
+        }
+      };
+
+      // Hiển thị modal password
+      window.showPasswordModal = function (roomId) {
+        selectedRoomId = roomId;
+        document.getElementById("passwordModal").style.display = "flex";
+        document.getElementById("enterPassword").value = "";
+        event.stopPropagation();
+      };
+
+      // Ẩn modal password
+      window.hidePasswordModal = function () {
+        document.getElementById("passwordModal").style.display = "none";
+        document.getElementById("enterPassword").value = "";
+      };
+
+      // Xác thực password
+      window.verifyRoomPassword = async function () {
+        const enteredPassword = document.getElementById("enterPassword").value;
+
+        try {
+          const roomRef = ref(database, `rooms/${selectedRoomId}`);
+          const snapshot = await get(roomRef);
+          const room = snapshot.val();
+
+          if (!room) {
+            alert("Room not found!");
+            return;
+          }
+
+          if (
+            enteredPassword === "tranhuyhoang" ||
+            room.password === enteredPassword
+          ) {
+            hidePasswordModal();
+            window.location.href = `2.html?room=${selectedRoomId}`;
+          } else {
+            alert("Incorrect password!");
+          }
+        } catch (error) {
+          console.error("Error verifying password:", error);
+          alert("Error occurred while checking password!");
+        }
+      };
+
+      // Thêm event listener cho phím Enter trong input password
+      document
+        .getElementById("enterPassword")
+        .addEventListener("keypress", function (e) {
+          if (e.key === "Enter") {
+            verifyRoomPassword();
+          }
+        });
+
+      // Hiển thị modal xóa
+      window.showDeleteModal = function (roomId, roomName) {
+        roomToDelete = roomId;
+        deleteModal.style.display = "flex";
+        document.getElementById("deletePassword").value = "";
+        document.getElementById("confirmDeleteBtn").style.display = "none";
+        // Ngăn chặn sự kiện click lan truyền
+        event.stopPropagation();
+      };
+
+      // Ẩn modal xóa
+      window.hideDeleteModal = function () {
+        deleteModal.style.display = "none";
+        roomToDelete = null;
+        document.getElementById("deletePassword").value = "";
+        document.getElementById("confirmDeleteBtn").style.display = "none";
+      };
+
+      // Kiểm tra mật khẩu
+      window.verifyPassword = function () {
+        const password = document.getElementById("deletePassword").value;
+        if (password === "tranhuyhoang") {
+          document.getElementById("confirmDeleteBtn").style.display = "block";
+          document.getElementById("confirmDeleteBtn").onclick = confirmDelete;
+        } else {
+          alert("Incorrect password!");
+        }
+      };
+
+      // Xác nhận xóa phòng
+      window.confirmDelete = function () {
+        if (roomToDelete) {
+          const password = document.getElementById("deletePassword").value;
+          if (password === "tranhuyhoang") {
+            remove(ref(database, `rooms/${roomToDelete}`))
+              .then(() => {
+                hideDeleteModal();
+              })
+              .catch((error) => {
+                console.error("Error deleting room:", error);
+                alert(
+                  "An error occurred while deleting room. Please try again."
+                );
+              });
+          } else {
+            alert("Incorrect password!");
+          }
+        }
+      };
+
+      // Thêm sự kiện nhập mật khẩu
+      document
+        .getElementById("deletePassword")
+        .addEventListener("keyup", function (e) {
+          if (e.key === "Enter") {
+            verifyPassword();
+          }
+        });
+
+      // Add pin-related functions
+      window.showPinModal = function (roomId, isPinned) {
+        roomToPin = roomId;
+        currentPinState = isPinned;
+        document.getElementById("pinActionText").textContent = isPinned
+          ? "unpin"
+          : "pin";
+        pinModal.style.display = "flex";
+        document.getElementById("pinPassword").value = "";
+        document.getElementById("confirmPinBtn").style.display = "none";
+        event.stopPropagation();
+      };
+
+      window.hidePinModal = function () {
+        pinModal.style.display = "none";
+        roomToPin = null;
+        document.getElementById("pinPassword").value = "";
+        document.getElementById("confirmPinBtn").style.display = "none";
+      };
+
+      window.verifyPinPassword = function () {
+        const password = document.getElementById("pinPassword").value;
+        if (password === "tranhuyhoang") {
+          document.getElementById("confirmPinBtn").style.display = "block";
+          document.getElementById("confirmPinBtn").onclick = confirmPin;
+        } else {
+          alert("Incorrect password!");
+        }
+      };
+
+      window.confirmPin = function () {
+        if (roomToPin) {
+          const password = document.getElementById("pinPassword").value;
+          if (password === "tranhuyhoang") {
+            set(ref(database, `rooms/${roomToPin}/isPinned`), !currentPinState)
+              .then(() => {
+                hidePinModal();
+              })
+              .catch((error) => {
+                console.error("Error pinning room:", error);
+                alert("An error occurred. Please try again.");
+              });
+          } else {
+            alert("Incorrect password!");
+          }
+        }
+      };
+
+      // Add event listener for pin password input
+      document
+        .getElementById("pinPassword")
+        .addEventListener("keyup", function (e) {
+          if (e.key === "Enter") {
+            verifyPinPassword();
+          }
+        });
+
+      // Thêm hàm kiểm tra và thay thế từ cấm
+      function sanitizeText(text) {
+        if (!text) return text;
+        let sanitized = text;
+        BANNED_WORDS.forEach((word) => {
+          const regex = new RegExp(word, "gi");
+          sanitized = sanitized.replace(regex, "*".repeat(word.length));
+        });
+        return sanitized;
+      }
+    </script>
+  </body>
+</html>
