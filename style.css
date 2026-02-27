@@ -449,21 +449,22 @@ footer {
     opacity: 0.8;
 }
 
-@media (max-width: 992px) {
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-    }
+/* Fixed Layout Overrides */
+html, body {
+    min-width: 1400px;
+    overflow-x: auto;
 }
-
-@media (max-width: 576px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-    .footer-bottom {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
+.layout-wrapper {
+    width: 1400px !important;
+    margin: 0 auto !important;
+}
+.navbar .nav-container {
+    width: 1400px !important;
+    max-width: 1400px !important;
+}
+.footer-container {
+    width: 1400px !important;
+    max-width: 1400px !important;
 }
 
 /* Existing utility styles from previous version (abridged) */
