@@ -2,32 +2,13 @@
 const notificationHTML = `
 <div class="popup-notification" id="popupNotification">
     <div class="popup-header">
-        <span class="popup-title">New Notification</span>
-        <button class="popup-close" onclick="closePopup()" title="Close" aria-label="Close notification">✖</button>
+        <span class="popup-title">Haley Chat</span>
+        <button class="popup-close" onclick="closePopup()" title="Close">✖</button>
     </div>
     <div class="popup-content">
-        
-        <!-- Chỗ này là chèn TIKTOK --------------------------------------------------------------------------------------------------------------->
-
-        <p class="announcement">
-                <img src="/Chat/tik-tok.png" alt="TikTok" class="tiktok-icon"> My TikTok channel!            
-                <a href="https://www.tiktok.com/@haleyplaygame" target="_blank" class="tiktok-link">
-                    <i class="fab fa-tiktok"></i> @haleyplaygame
-                </a>
-        </p>
- </p>
-        <div class="cloak-row" style="text-align:center; margin-top: 8px;">
-            <button id="cloakBtnNotif" class="cloak-btn" title="Open in about:blank">🕶️ About:blank</button>
-            <button id="cloakCustomBtn" class="cloak-btn" title="Custom cloak with title and icon" style="margin-left: 8px;">🎭 Cloak</button>
-        </div>
-
-        <!-- Chỗ này là chèn khung chat --------------------------------------------------------------------------------------------------------------->
-
-        <!-- Chat container - Lazy loaded to improve performance -->
         <div class="chat-container" id="chat-container">
-            <!-- Chat iframe will be loaded after 5 seconds to improve initial page load -->
-            <div style="width: 100%; height: 600px; display: flex; align-items: center; justify-content: center; background: #f5f5f5; border-radius: 8px;">
-                <p style="color: #666;">Loading chat...</p>
+            <div style="width: 100%; height: 580px; display: flex; align-items: center; justify-content: center; background: transparent;">
+                <p style="color: #b0b3b8; font-weight: 600;">Connecting to Haley Galaxy...</p>
             </div>
         </div>
     </div>
@@ -58,78 +39,92 @@ const notificationHTML = `
 
 <!-- Removed reward modal -->
 
+<!-- Chat dropdown -->
+
 <style>
 .popup-notification {
-                      position: fixed;
-                      bottom: 30px;
-                      right: 30px;
-                      background: linear-gradient(to right bottom, #ffffff, #f8f9fa);
-                      border-radius: 15px;
-                      padding: 5px;
-                      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-                      z-index: 1000;
-                      width: 450px;
-                      transform: scale(0.7);
-                      transform-origin: bottom right;
-                      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                      display: none;
-                      color: #333;
-                      border: 1px solid rgba(0,0,0,0.1);
-                    }
+    position: fixed;
+    top: 85px;
+    right: 20px;
+    background: #1e242e;
+    border-radius: 20px;
+    padding: 0;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
+    z-index: 2000;
+    width: 400px;
+    max-width: calc(100vw - 40px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: none;
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    color: #e4e6eb;
+    overflow: hidden;
+    height: auto;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.popup-notification.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
 
 .popup-header {
+    background: #151921;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 15px;
-    border-bottom: 1px solid #eee;
+    padding: 12px 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .popup-title {
-    font-weight: 600;
-    color: #2c3e50;
-    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    font-size: 1rem;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 .popup-title::before {
-    content: "🔔";
+    content: "💬";
     font-size: 1.2rem;
 }
 
 .popup-close {
-    background: #ffe0e0;
-    border: 2px solid #ff6b6b;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 18px;
-    color: #c53030;
+    font-size: 14px;
+    color: #a0aec0;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .popup-close:hover {
-    background: #ffd1d1;
-    color: #9b2c2c;
-    transform: scale(1.05);
+    background: #ff4757;
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+.popup-content {
+    padding: 0;
 }
 
 .announcement {
-    background: linear-gradient(45deg, #ffffff, #ffffff);
-    color: rgb(0, 0, 0);
-    padding: 15px 20px;
-    border-radius: 8px;
-    margin: 20px 0;
-    font-size: 16px;
+    background: rgba(45, 55, 72, 0.4);
+    color: #fff;
+    padding: 12px 20px;
+    margin: 0;
+    font-size: 14px;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .tiktok-link {
@@ -637,52 +632,35 @@ const notificationHTML = `
 // Initialize notification
 function initNotification() {
   // Insert HTML into body
-  document.body.insertAdjacentHTML("beforeend", notificationHTML);
-
-  // If user dismissed before, do not auto show across pages
-  const dismissed = localStorage.getItem("popupDismissed") === "true";
-  if (!dismissed) {
-    // Show notification after 3 seconds
-    setTimeout(() => {
-      const popup = document.getElementById("popupNotification");
-      if (popup) popup.classList.add("show");
-    }, 2000);
-  } else {
-    // Provide a manual open button if dismissed
-    showMinimizeButton();
+  if (!document.getElementById("popupNotification")) {
+    document.body.insertAdjacentHTML("beforeend", notificationHTML);
   }
+}
 
-  // Removed reward modal handlers
+// Toggle Chat popup
+function toggleChat() {
+  const popup = document.getElementById("popupNotification");
+  if (!popup) return;
+  
+  if (popup.classList.contains("show")) {
+    popup.classList.remove("show");
+    setTimeout(() => { popup.style.display = "none"; }, 300);
+  } else {
+    popup.style.display = "block";
+    setTimeout(() => { popup.classList.add("show"); }, 10);
+  }
 }
 
 // Close popup function
 function closePopup() {
   const popup = document.getElementById("popupNotification");
-  // Thêm class để tạo hiệu ứng thu nhỏ
-  popup.classList.add("minimized");
-  // Persist dismissal across pages
-  localStorage.setItem("popupDismissed", "true");
-
-  // Tạo nút minimize để mở lại popup
-  showMinimizeButton();
+  if (popup) {
+    popup.classList.remove("show");
+    setTimeout(() => { popup.style.display = "none"; }, 300);
+  }
 }
 
-// Render a reopen/minimize button to manually open the popup
-function showMinimizeButton() {
-  if (document.getElementById("minimizeButton")) return; // avoid duplicates
-  const popup = document.getElementById("popupNotification");
-  const minimizeBtn = document.createElement("div");
-  minimizeBtn.id = "minimizeButton";
-  minimizeBtn.innerHTML = "📢 New Notification";
-  minimizeBtn.onclick = () => {
-    if (popup) popup.classList.remove("minimized");
-    popup.classList.add("show");
-    // User chose to reopen → treat as not dismissed so future pages auto show
-    localStorage.removeItem("popupDismissed");
-    minimizeBtn.remove();
-  };
-  document.body.appendChild(minimizeBtn);
-}
+// Removed minimize button logic as chat is now triggered from header icon
 
 // Attach cloak handler
 function attachCloakHandler() {
@@ -773,8 +751,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const chatContainer = document.getElementById("chat-container");
     if (chatContainer) {
       chatContainer.innerHTML =
-        '<iframe src="/Chat/1.html" title="Chat Room - Join the conversation" frameborder="0" style="width: 100%; height: 600px; border: none; margin-top: 15px;"></iframe>';
-      console.log("Chat iframe loaded after 5s delay");
+        '<iframe src="/Chat/2.html?room=haley-global-chat" title="Chat Room" frameborder="0" style="width: 100%; height: 580px; border: none;"></iframe>';
     }
   }, 5000);
 });

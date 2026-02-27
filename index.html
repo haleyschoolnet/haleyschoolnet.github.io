@@ -1,42 +1,105 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlayZone - Kho Game Khổng Lồ, Chơi Ngay Không Cần Cài Đặt</title>
-    <meta name="description" content="Khám phá hàng vạn trò chơi miễn phí đủ mọi thể loại: Hành động, Trí tuệ, Đua xe, Game Bạn Gái. Cập nhật game nóng hổi mỗi ngày!">
+    <title>HaleySchool Galaxy | Premium Community Entertainment Platform</title>
+    <meta name="description" content="Welcome to HaleySchool Galaxy - The ultimate community-driven entertainment platform. Discover a hand-curated collection of interactive mini-games, connect with global players via live chat, and experience a safe, high-speed gaming universe.">
+    <meta name="keywords" content="haley galaxy, social gaming, community entertainment, interactive platform, mini games, browser entertainment, safe gaming hub">
+    <meta name="author" content="HaleySchool">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://haleyschool.github.io/">
+    <meta property="og:title" content="HaleySchool Galaxy | Premium Community Entertainment Platform">
+    <meta property="og:description" content="The ultimate community-driven entertainment platform. Play, chat, and connect in the Galaxy.">
+    <meta property="og:image" content="logo.png">
+
+    <!-- Schema.org for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "HaleySchool Galaxy",
+      "url": "https://haleyschool.github.io/",
+      "description": "HaleySchool Galaxy is a premium social entertainment platform featuring curated interactive experiences and a global community chat system.",
+      "applicationCategory": "EntertainmentApplication",
+      "operatingSystem": "Web browser",
+      "author": {
+        "@type": "Organization",
+        "name": "HaleySchool"
+      }
+    }
+    </script>
+
+    <link rel="shortcut icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Initial Loading Screen -->
+    <div id="loading-screen" style="position:fixed; inset:0; background:#0b0e14; z-index:9999; display:flex; flex-direction:column; align-items:center; justify-content:center; transition: opacity 0.5s ease;">
+        <img src="logo.png" alt="HaleySchool Galaxy" style="width:100px; height:100px; border-radius:50%; animation: pulse-galaxy 1.5s infinite ease-in-out;">
+        <div style="margin-top:20px; color:#4a6ee0; font-weight:800; font-size:1.2rem; letter-spacing:4px; text-transform:uppercase;">Haley Galaxy</div>
+        <div style="width:150px; height:3px; background:rgba(74, 110, 224, 0.2); border-radius:10px; margin-top:15px; overflow:hidden;">
+            <div style="width:50%; height:100%; background:#4a6ee0; border-radius:10px; animation: loading-bar 1.5s infinite ease-in-out;"></div>
+        </div>
+    </div>
+    
+    <style>
+    @keyframes pulse-galaxy {
+        0%, 100% { transform: scale(1); opacity: 1; box-shadow: 0 0 20px rgba(74, 110, 224, 0.4); }
+        50% { transform: scale(1.05); opacity: 0.8; box-shadow: 0 0 40px rgba(74, 110, 224, 0.6); }
+    }
+    @keyframes loading-bar {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(200%); }
+    }
+    </style>
+
+    <!-- Game Playing Modal -->
+    <div id="game-modal" class="game-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="modal-game-title">Game Title</span>
+                <div class="modal-controls">
+                    <button id="fullscreen-btn" title="Fullscreen"><i class="fa-solid fa-expand"></i></button>
+                    <button id="close-modal-btn" title="Close"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <div class="iframe-container">
+                <iframe id="game-iframe" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
 
     <!-- Header / Navbar -->
     <header class="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <i class="fa-solid fa-gamepad"></i> PlayZone
-            </div>
+            <h1 class="logo">
+                <img src="logo.png" alt="HaleySchool Galaxy Logo" class="logo-img">
+                <span>HaleySchool</span>
+            </h1>
             
             <div class="search-wrapper">
                 <div class="search-bar">
-                    <input type="text" placeholder="Tìm tên game, thể loại (VD: Bắn súng, Đua xe...)">
+                    <input type="text" placeholder="Search for games...">
                     <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                    <!-- Search Suggestions -->
                     <div class="search-suggestions">
-                        <div class="sugg-title">Tìm kiếm phổ biến</div>
-                        <a href="#"><i class="fa-solid fa-fire"></i> Lửa và Nước</a>
-                        <a href="#"><i class="fa-solid fa-gamepad"></i> Minecraft Sinh Tồn</a>
-                        <a href="#"><i class="fa-solid fa-car"></i> Đua Xe Địa Hình</a>
-                        <a href="#"><i class="fa-solid fa-skull"></i> Bắn Zombie</a>
+                        <!-- Dynamic -->
                     </div>
                 </div>
             </div>
 
             <div class="nav-links">
-                <a href="#"><i class="fa-solid fa-bell"></i> Thông báo <span class="badge-dot"></span></a>
-                <a href="#"><i class="fa-solid fa-bookmark"></i> Vừa chơi</a>
-                <a href="#" class="btn-login"><i class="fa-solid fa-user"></i> Hồ sơ của tôi</a>
+                <button id="theme-toggle" class="theme-btn" title="Toggle Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="#" id="open-chat-btn" title="Chat with everyone"><i class="fa-solid fa-comments"></i></a>
+                <a href="#"><i class="fa-solid fa-bell"></i></a>
+                <a href="#" class="btn-login"><i class="fa-solid fa-user"></i> Profile</a>
             </div>
         </div>
     </header>
@@ -47,120 +110,103 @@
         <!-- Sidebar Navigation -->
         <aside class="sidebar">
             <div class="sidebar-menu">
-                <h4 class="menu-title">Khám Phá</h4>
-                <a href="#" class="menu-item active"><i class="fa-solid fa-house"></i> Trang Chủ</a>
-                <a href="#" class="menu-item"><i class="fa-solid fa-fire-flame-curved"></i> Đang Thịnh Hành</a>
-                <a href="#" class="menu-item"><i class="fa-solid fa-bolt"></i> Mới Phát Hành</a>
-                <a href="#" class="menu-item"><i class="fa-solid fa-trophy"></i> Bảng Xếp Hạng</a>
-                <a href="#" class="menu-item"><i class="fa-solid fa-dice"></i> Chơi Ngẫu Nhiên</a>
+                <h4 class="menu-title">Browse</h4>
+                <a href="#" class="menu-item active" data-filter="all"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="#" class="menu-item" data-filter="trending"><i class="fa-solid fa-fire-flame-curved"></i> Trending</a>
+                <a href="#" class="menu-item" id="random-game-btn"><i class="fa-solid fa-dice"></i> Random Play</a>
 
-                <h4 class="menu-title mt-4">Thể Loại Trò Chơi</h4>
-                <div class="grid-menu">
-                    <a href="#" class="grid-item">
+                <h4 class="menu-title mt-4">Top Categories</h4>
+                <div id="dynamic-grid-menu" class="grid-menu">
+                    <a href="#" class="grid-item" data-tag="action-and-combat">
                         <div class="icon-box" style="background:#ff5252"><i class="fa-solid fa-gun"></i></div>
-                        <span>Hành Động</span>
+                        <span>Action</span>
                     </a>
-                    <a href="#" class="grid-item">
-                        <div class="icon-box" style="background:#448aff"><i class="fa-solid fa-puzzle-piece"></i></div>
-                        <span>Trí Tuệ</span>
+                    <a href="#" class="grid-item" data-tag="sports">
+                        <div class="icon-box" style="background:#448aff"><i class="fa-solid fa-futbol"></i></div>
+                        <span>Sports</span>
                     </a>
-                    <a href="#" class="grid-item">
+                    <a href="#" class="grid-item" data-tag="car-and-racing">
                         <div class="icon-box" style="background:#ffb300"><i class="fa-solid fa-car"></i></div>
-                        <span>Đua Xe</span>
+                        <span>Racing</span>
                     </a>
-                    <a href="#" class="grid-item">
-                        <div class="icon-box" style="background:#69f0ae"><i class="fa-solid fa-futbol"></i></div>
-                        <span>Thể Thao</span>
+                    <a href="#" class="grid-item" data-tag="multiplayer">
+                        <div class="icon-box" style="background:#69f0ae"><i class="fa-solid fa-user-group"></i></div>
+                        <span>2 Player</span>
                     </a>
-                    <a href="#" class="grid-item">
-                        <div class="icon-box" style="background:#e040fb"><i class="fa-solid fa-heart"></i></div>
-                        <span>Bạn Gái</span>
+                    <a href="#" class="grid-item" data-tag="platformer-and-adventure">
+                        <div class="icon-box" style="background:#e040fb"><i class="fa-solid fa-map"></i></div>
+                        <span>Adventure</span>
                     </a>
-                    <a href="#" class="grid-item">
-                        <div class="icon-box" style="background:#ff6e40"><i class="fa-solid fa-kitchen-set"></i></div>
-                        <span>Nấu Ăn</span>
+                    <a href="#" class="grid-item" data-tag="puzzle-and-board">
+                        <div class="icon-box" style="background:#00bcd4"><i class="fa-solid fa-puzzle-piece"></i></div>
+                        <span>Puzzle</span>
                     </a>
-                    <a href="#" class="grid-item">
-                        <div class="icon-box" style="background:#18ffff"><i class="fa-solid fa-users"></i></div>
-                        <span>2 Người</span>
+                    <a href="#" class="grid-item" data-tag="shooting">
+                        <div class="icon-box" style="background:#f44336"><i class="fa-solid fa-crosshairs"></i></div>
+                        <span>Shooting</span>
                     </a>
-                    <a href="#" class="grid-item">
-                        <div class="icon-box" style="background:#bcaaa4"><i class="fa-solid fa-chess-knight"></i></div>
-                        <span>Chiến Thuật</span>
+                    <a href="#" class="grid-item" data-tag="simulation-and-clicker">
+                        <div class="icon-box" style="background:#8bc34a"><i class="fa-solid fa-mouse-pointer"></i></div>
+                        <span>Clicker</span>
                     </a>
-                    <a href="#" class="grid-item">
-                        <div class="icon-box" style="background:#4caf50"><i class="fa-solid fa-ghost"></i></div>
-                        <span>Kinh Dị</span>
-                    </a>
-                    <a href="#" class="grid-item">
-                        <div class="icon-box" style="background:#ff9800"><i class="fa-solid fa-coins"></i></div>
+                    <a href="#" class="grid-item" data-tag="runner-and-arcade">
+                        <div class="icon-box" style="background:#ff6e40"><i class="fa-solid fa-ghost"></i></div>
                         <span>Arcade</span>
                     </a>
+                    <a href="#" class="grid-item" data-tag="horror-and-survival">
+                        <div class="icon-box" style="background:#37474f"><i class="fa-solid fa-skull"></i></div>
+                        <span>Horror</span>
+                    </a>
+                </div>
+
+                <h4 class="menu-title mt-4">Game Series</h4>
+                <div class="series-list">
+                    <a href="#" class="menu-item" data-tag="fnaf">FNAF Series</a>
+                    <a href="#" class="menu-item" data-tag="mario">Mario Games</a>
+                    <a href="#" class="menu-item" data-tag="papas">Papa's Series</a>
+                    <a href="#" class="menu-item" data-tag="fireboy">Fireboy & Watergirl</a>
+                    <a href="#" class="menu-item" data-tag="snail">Snail Bob</a>
+                    <a href="#" class="menu-item" data-tag="vex">Vex Games</a>
+                    <a href="#" class="menu-item" data-tag="minecraft">Minecraft Style</a>
+                    <a href="#" class="menu-item" data-tag="bloons">Bloons TD</a>
+                    <a href="#" class="menu-item" data-tag="badicecream">Bad Ice Cream</a>
                 </div>
             </div>
         </aside>
 
-        <!-- Main Content (Game Grids) -->
+        <!-- Main Content -->
         <main class="main-content">
             
-            <!-- Quick Tags Horizontal Scroll -->
-            <div class="quick-tags">
-                <a href="#" class="tag">#BắnSúng3D</a>
-                <a href="#" class="tag">#KhủngLong</a>
-                <a href="#" class="tag">#SinhTồn</a>
-                <a href="#" class="tag">#TiệmBánh</a>
-                <a href="#" class="tag">#Zombies</a>
-                <a href="#" class="tag">#Ninja</a>
-                <a href="#" class="tag">#Bida</a>
-                <a href="#" class="tag">#CờVua</a>
-                <a href="#" class="tag">#ThờiTrang</a>
-                <a href="#" class="tag">#PokiStyle</a>
+            <!-- Hidden SEO Section for Search Engines -->
+            <section style="display:none">
+                <h2>Welcome to the HaleySchool Galaxy Entertainment Hub</h2>
+                <p>HaleySchool is more than just a gaming site. We are a social entertainment platform dedicated to providing a safe, fast, and interactive environment for users worldwide. Our platform features hand-picked interactive content across various categories, integrated with a real-time community chat system. Whether you're looking for social interaction or a quick break, HaleySchool Galaxy is your premium destination for online entertainment.</p>
+            </section>
+            
+            <div id="quick-tags-container" class="quick-tags">
+                <!-- Dynamic -->
             </div>
 
-            <!-- Section 1: Hero / Featured -->
-            <section class="game-section">
+
+            <section class="game-section" id="section-trending">
                 <div class="section-header">
-                    <h2><i class="fa-solid fa-star" style="color:#ffb300"></i> Lựa Chọn Dành Cho Bạn</h2>
-                    <a href="#" class="view-all">Xem tất cả <i class="fa-solid fa-angle-right"></i></a>
+                    <h2 id="section-title-trending"><i class="fa-solid fa-bolt" style="color:#ff5252"></i> Trending Games</h2>
                 </div>
-                
-                <div id="hero-grid-container" class="game-grid hero-grid">
-                    <!-- Vẽ tự động qua app.js -->
-                </div>
+                <div id="dense-grid-container" class="game-grid dense-grid"></div>
             </section>
 
-            <!-- Section 2: Intense Dense Grid -->
-            <section class="game-section">
+            <section class="game-section" id="section-two-player">
                 <div class="section-header">
-                    <h2><i class="fa-solid fa-bolt" style="color:#ff5252"></i> Trò Chơi Mới Mỗi Ngày</h2>
-                    <a href="#" class="view-all">Xem tất cả 1.250 game mới <i class="fa-solid fa-angle-right"></i></a>
+                    <h2><i class="fa-solid fa-user-friends" style="color:#00e676"></i> Multiplayer Duel</h2>
                 </div>
-                
-                <div id="dense-grid-container" class="game-grid dense-grid">
-                    <!-- Vẽ tự động qua app.js -->
-                </div>
+                <div id="two-player-grid-container" class="game-grid duel-grid"></div>
             </section>
 
-            <!-- Section 3: 2 Player Games -->
-            <section class="game-section">
+             <section class="game-section" id="section-sports">
                 <div class="section-header">
-                    <h2><i class="fa-solid fa-user-friends" style="color:#00e676"></i> Chơi Cùng Bạn Bè - Game 2 Người</h2>
+                    <h2><i class="fa-solid fa-futbol" style="color:#2196f3"></i> Sports Arena</h2>
                 </div>
-                
-                <div id="two-player-grid-container" class="game-grid duel-grid">
-                    <!-- Vẽ tự động qua app.js -->
-                </div>
-            </section>
-
-             <!-- Section 4: Sports Games -->
-             <section class="game-section">
-                <div class="section-header">
-                    <h2><i class="fa-solid fa-futbol" style="color:#2196f3"></i> Thử Thách Thể Thao</h2>
-                </div>
-                
-                <div id="sports-grid-container" class="game-grid dense-grid">
-                    <!-- Vẽ tự động qua app.js -->
-                </div>
+                <div id="sports-grid-container" class="game-grid dense-grid"></div>
             </section>
 
         </main>
@@ -168,64 +214,76 @@
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-main-info">
-                <h3><i class="fa-solid fa-gamepad"></i> PlayZone</h3>
-                <p>Nền tảng giải trí trực tuyến hàng đầu, hội tụ hơn 10.000+ trò chơi chất lượng cao. Chơi ngay trên trình duyệt, không cần tải về.</p>
-            </div>
-            <div class="footer-links-group">
-                <div class="link-col">
-                    <h4>Thể Loại</h4>
-                    <a href="#">Hành Động</a>
-                    <a href="#">Bạn Gái</a>
-                    <a href="#">Đua Xe</a>
-                    <a href="#">Chiến Thuật</a>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Branding Col -->
+                <div class="footer-col branding-col">
+                    <div class="footer-logo">
+                        <i class="fa-solid fa-rocket" style="color:var(--primary); transform: rotate(-45deg);"></i>
+                        <span>HaleySchool</span>
+                    </div>
+                    <p class="footer-desc">
+                        HaleySchool Galaxy is a premium community platform dedicated to high-quality interactive entertainment. We connect players through shared experiences, safe environments, and real-time social tools.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-discord"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
                 </div>
-                <div class="link-col">
-                    <h4>Về PlayZone</h4>
-                    <a href="#">Điều Khoản Sử Dụng</a>
-                    <a href="#">Chính Sách Bảo Mật</a>
-                    <a href="#">Liên Hệ & Xóa Game</a>
-                    <a href="#">Nhà Phát Triển</a>
+
+                <!-- Column 2 -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" data-filter="all">Home</a></li>
+                        <li><a href="#" data-filter="trending">Trending Now</a></li>
+                        <li><a href="#" id="random-play-footer">Random Game</a></li>
+                        <li><a href="#" data-filter="featured">Galaxy Favorites</a></li>
+                        <li><a href="#">New Releases</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Top Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" data-tag="combat">Action Games</a></li>
+                        <li><a href="#" data-tag="racing">Racing Games</a></li>
+                        <li><a href="#" data-tag="sports">Sports Arena</a></li>
+                        <li><a href="#" data-tag="puzzle">Puzzle Games</a></li>
+                        <li><a href="#" data-tag="shooting">Shooting</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Support & Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+                        <li><a href="privacy.html"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a></li>
+                        <li><a href="terms.html"><i class="fa-solid fa-file-contract"></i> Terms of Service</a></li>
+                        <li><a href="cookie.html"><i class="fa-solid fa-cookie-bite"></i> Cookie Policy</a></li>
+                        <li><a href="dmca.html"><i class="fa-solid fa-circle-exclamation"></i> DMCA</a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 PlayZone Game Studio. All rights reserved.
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2026 HaleySchool Game Galaxy. All rights reserved.
+                </div>
+                <div class="footer-meta">
+                    Designed for Speed & Fun. Join the Galaxy.
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- JavaScript for Interactions -->
-    <script>
-        const searchInput = document.querySelector(".search-bar input");
-        const suggestionsBox = document.querySelector(".search-suggestions");
-        const searchBar = document.querySelector(".search-bar");
-
-        searchInput.addEventListener("focus", () => {
-            searchBar.classList.add("focused");
-            suggestionsBox.style.display = "block";
-        });
-
-        document.addEventListener('click', function(event) {
-            const isClickInside = searchBar.contains(event.target);
-            if (!isClickInside) {
-                searchBar.classList.remove("focused");
-                suggestionsBox.style.display = "none";
-            }
-        });
-
-        const menuItems = document.querySelectorAll(".menu-item");
-        menuItems.forEach(item => {
-            item.addEventListener("click", function(e) {
-                e.preventDefault();
-                menuItems.forEach(i => i.classList.remove("active"));
-                this.classList.add("active");
-            });
-        });
-    </script>
-
-    <!-- Load Data and Dynamic Rendering -->
-    <script src="games.js"></script>
+    <script src="Chat/notification.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

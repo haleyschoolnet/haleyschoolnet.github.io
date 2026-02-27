@@ -1,0 +1,837 @@
+[
+  {
+    "category": "geometry-dash",
+    "games": [
+      {
+        "name": "geo-dash-2nn",
+        "url": "http://4.haleyschool.uk/11.geometry-dash/geo-dash-2nn/index.html",
+        "logo": "http://4.haleyschool.uk/11.geometry-dash/geo-dash-2nn/logo.png"
+      },
+      {
+        "name": "geodash",
+        "url": "http://4.haleyschool.uk/11.geometry-dash/geodash/index.html",
+        "logo": "http://4.haleyschool.uk/11.geometry-dash/geodash/logo.png"
+      },
+      {
+        "name": "geometryneondashrainbow",
+        "url": "http://4.haleyschool.uk/11.geometry-dash/geometryneondashrainbow/index.html",
+        "logo": "http://4.haleyschool.uk/11.geometry-dash/geometryneondashrainbow/logo.png"
+      },
+      {
+        "name": "geometryneondashworldtwo",
+        "url": "http://4.haleyschool.uk/11.geometry-dash/geometryneondashworldtwo/index.html",
+        "logo": "http://4.haleyschool.uk/11.geometry-dash/geometryneondashworldtwo/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "moto-x3m",
+    "games": [
+      {
+        "name": "moto-x3m-2",
+        "url": "http://4.haleyschool.uk/12.moto-x3m/moto-x3m-2/index.html",
+        "logo": "http://4.haleyschool.uk/12.moto-x3m/moto-x3m-2/logo.png"
+      },
+      {
+        "name": "moto-x3m-pool-party",
+        "url": "http://4.haleyschool.uk/12.moto-x3m/moto-x3m-pool-party/index.html",
+        "logo": "http://4.haleyschool.uk/12.moto-x3m/moto-x3m-pool-party/logo.png"
+      },
+      {
+        "name": "moto-x3m-spooky-land",
+        "url": "http://4.haleyschool.uk/12.moto-x3m/moto-x3m-spooky-land/index.html",
+        "logo": "http://4.haleyschool.uk/12.moto-x3m/moto-x3m-spooky-land/logo.png"
+      },
+      {
+        "name": "moto-x3m-winter",
+        "url": "http://4.haleyschool.uk/12.moto-x3m/moto-x3m-winter/index.html",
+        "logo": "http://4.haleyschool.uk/12.moto-x3m/moto-x3m-winter/logo.png"
+      },
+      {
+        "name": "motox3m",
+        "url": "http://4.haleyschool.uk/12.moto-x3m/motox3m/index.html",
+        "logo": "http://4.haleyschool.uk/12.moto-x3m/motox3m/logo.png"
+      },
+      {
+        "name": "motox3m3",
+        "url": "http://4.haleyschool.uk/12.moto-x3m/motox3m3/index.html",
+        "logo": "http://4.haleyschool.uk/12.moto-x3m/motox3m3/logo.png"
+      },
+      {
+        "name": "motox3m50levels",
+        "url": "http://4.haleyschool.uk/12.moto-x3m/motox3m50levels/index.html",
+        "logo": "http://4.haleyschool.uk/12.moto-x3m/motox3m50levels/logo.png"
+      },
+      {
+        "name": "motox3m5poolparty",
+        "url": "http://4.haleyschool.uk/12.moto-x3m/motox3m5poolparty/index.html",
+        "logo": "http://4.haleyschool.uk/12.moto-x3m/motox3m5poolparty/logo.png"
+      },
+      {
+        "name": "motox3m6spookyland",
+        "url": "http://4.haleyschool.uk/12.moto-x3m/motox3m6spookyland/index.html",
+        "logo": "http://4.haleyschool.uk/12.moto-x3m/motox3m6spookyland/logo.png"
+      },
+      {
+        "name": "motox3mpoolparty",
+        "url": "http://4.haleyschool.uk/12.moto-x3m/motox3mpoolparty/index.html",
+        "logo": "http://4.haleyschool.uk/12.moto-x3m/motox3mpoolparty/logo.png"
+      },
+      {
+        "name": "motox3mspookyland",
+        "url": "http://4.haleyschool.uk/12.moto-x3m/motox3mspookyland/index.html",
+        "logo": "http://4.haleyschool.uk/12.moto-x3m/motox3mspookyland/logo.png"
+      },
+      {
+        "name": "motox3mwinter",
+        "url": "http://4.haleyschool.uk/12.moto-x3m/motox3mwinter/index.html",
+        "logo": "http://4.haleyschool.uk/12.moto-x3m/motox3mwinter/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "pacman",
+    "games": [
+      {
+        "name": "pacman",
+        "url": "http://4.haleyschool.uk/14.pacman/pacman/index.html",
+        "logo": "http://4.haleyschool.uk/14.pacman/pacman/logo.png"
+      },
+      {
+        "name": "pacman3d",
+        "url": "http://4.haleyschool.uk/14.pacman/pacman3d/index.html",
+        "logo": "http://4.haleyschool.uk/14.pacman/pacman3d/logo.png"
+      },
+      {
+        "name": "pacmanfps",
+        "url": "http://4.haleyschool.uk/14.pacman/pacmanfps/index.html",
+        "logo": "http://4.haleyschool.uk/14.pacman/pacmanfps/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "paper-io",
+    "games": [
+      {
+        "name": "paperio2",
+        "url": "http://4.haleyschool.uk/15.paper-io/paperio2/index.html",
+        "logo": "http://4.haleyschool.uk/15.paper-io/paperio2/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "random-series",
+    "games": [
+      {
+        "name": "basket-random",
+        "url": "http://4.haleyschool.uk/16.random-series/basket-random/index.html",
+        "logo": "http://4.haleyschool.uk/16.random-series/basket-random/logo.png"
+      },
+      {
+        "name": "boxing-random",
+        "url": "http://4.haleyschool.uk/16.random-series/boxing-random/index.html",
+        "logo": "http://4.haleyschool.uk/16.random-series/boxing-random/logo.png"
+      },
+      {
+        "name": "mace-random",
+        "url": "http://4.haleyschool.uk/16.random-series/mace-random/index.html",
+        "logo": "http://4.haleyschool.uk/16.random-series/mace-random/logo.png"
+      },
+      {
+        "name": "soccer-random",
+        "url": "http://4.haleyschool.uk/16.random-series/soccer-random/index.html",
+        "logo": "http://4.haleyschool.uk/16.random-series/soccer-random/logo.png"
+      },
+      {
+        "name": "spear-random",
+        "url": "http://4.haleyschool.uk/16.random-series/spear-random/index.html",
+        "logo": "http://4.haleyschool.uk/16.random-series/spear-random/logo.png"
+      },
+      {
+        "name": "sword-random",
+        "url": "http://4.haleyschool.uk/16.random-series/sword-random/index.html",
+        "logo": "http://4.haleyschool.uk/16.random-series/sword-random/logo.png"
+      },
+      {
+        "name": "tennis-random",
+        "url": "http://4.haleyschool.uk/16.random-series/tennis-random/index.html",
+        "logo": "http://4.haleyschool.uk/16.random-series/tennis-random/logo.png"
+      },
+      {
+        "name": "volley-random",
+        "url": "http://4.haleyschool.uk/16.random-series/volley-random/index.html",
+        "logo": "http://4.haleyschool.uk/16.random-series/volley-random/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "retro-bowl",
+    "games": [
+      {
+        "name": "colege-retro-bowl",
+        "url": "http://4.haleyschool.uk/17.retro-bowl/colege-retro-bowl/index.html",
+        "logo": "http://4.haleyschool.uk/17.retro-bowl/colege-retro-bowl/logo.png"
+      },
+      {
+        "name": "college-bowl",
+        "url": "http://4.haleyschool.uk/17.retro-bowl/college-bowl/index.html",
+        "logo": "http://4.haleyschool.uk/17.retro-bowl/college-bowl/logo.png"
+      },
+      {
+        "name": "retro-bowl",
+        "url": "http://4.haleyschool.uk/17.retro-bowl/retro-bowl/index.html",
+        "logo": "http://4.haleyschool.uk/17.retro-bowl/retro-bowl/logo.png"
+      },
+      {
+        "name": "retro-bowl-college",
+        "url": "http://4.haleyschool.uk/17.retro-bowl/retro-bowl-college/index.html",
+        "logo": "http://4.haleyschool.uk/17.retro-bowl/retro-bowl-college/logo.png"
+      },
+      {
+        "name": "retrob",
+        "url": "http://4.haleyschool.uk/17.retro-bowl/retrob/index.html",
+        "logo": "http://4.haleyschool.uk/17.retro-bowl/retrob/logo.png"
+      },
+      {
+        "name": "retrobowl",
+        "url": "http://4.haleyschool.uk/17.retro-bowl/retrobowl/index.html",
+        "logo": "http://4.haleyschool.uk/17.retro-bowl/retrobowl/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "riddle-school",
+    "games": [
+      {
+        "name": "riddle-school",
+        "url": "http://4.haleyschool.uk/18.riddle-school/riddle-school/index.html",
+        "logo": "http://4.haleyschool.uk/18.riddle-school/riddle-school/logo.png"
+      },
+      {
+        "name": "riddle-school-2",
+        "url": "http://4.haleyschool.uk/18.riddle-school/riddle-school-2/index.html",
+        "logo": "http://4.haleyschool.uk/18.riddle-school/riddle-school-2/logo.png"
+      },
+      {
+        "name": "riddle-school-3",
+        "url": "http://4.haleyschool.uk/18.riddle-school/riddle-school-3/index.html",
+        "logo": "http://4.haleyschool.uk/18.riddle-school/riddle-school-3/logo.png"
+      },
+      {
+        "name": "riddle-school-4",
+        "url": "http://4.haleyschool.uk/18.riddle-school/riddle-school-4/index.html",
+        "logo": "http://4.haleyschool.uk/18.riddle-school/riddle-school-4/logo.png"
+      },
+      {
+        "name": "riddle-school-5",
+        "url": "http://4.haleyschool.uk/18.riddle-school/riddle-school-5/index.html",
+        "logo": "http://4.haleyschool.uk/18.riddle-school/riddle-school-5/logo.png"
+      },
+      {
+        "name": "riddle-transfer",
+        "url": "http://4.haleyschool.uk/18.riddle-school/riddle-transfer/index.html",
+        "logo": "http://4.haleyschool.uk/18.riddle-school/riddle-transfer/logo.png"
+      },
+      {
+        "name": "riddle-transfer-2",
+        "url": "http://4.haleyschool.uk/18.riddle-school/riddle-transfer-2/index.html",
+        "logo": "http://4.haleyschool.uk/18.riddle-school/riddle-transfer-2/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "slope",
+    "games": [
+      {
+        "name": "slope-2",
+        "url": "http://4.haleyschool.uk/19.slope/slope-2/index.html",
+        "logo": "http://4.haleyschool.uk/19.slope/slope-2/logo.png"
+      },
+      {
+        "name": "slope-3",
+        "url": "http://4.haleyschool.uk/19.slope/slope-3/index.html",
+        "logo": "http://4.haleyschool.uk/19.slope/slope-3/logo.png"
+      },
+      {
+        "name": "slope-unblocked",
+        "url": "http://4.haleyschool.uk/19.slope/slope-unblocked/index.html",
+        "logo": "http://4.haleyschool.uk/19.slope/slope-unblocked/logo.png"
+      },
+      {
+        "name": "slope2",
+        "url": "http://4.haleyschool.uk/19.slope/slope2/index.html",
+        "logo": "http://4.haleyschool.uk/19.slope/slope2/logo.png"
+      },
+      {
+        "name": "slopeballfallingball",
+        "url": "http://4.haleyschool.uk/19.slope/slopeballfallingball/index.html",
+        "logo": "http://4.haleyschool.uk/19.slope/slopeballfallingball/logo.png"
+      },
+      {
+        "name": "sr",
+        "url": "http://4.haleyschool.uk/19.slope/sr/index.html",
+        "logo": "http://4.haleyschool.uk/19.slope/sr/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "snail-bob",
+    "games": [
+      {
+        "name": "snail-bob",
+        "url": "http://4.haleyschool.uk/20.snail-bob/snail-bob/index.html",
+        "logo": "http://4.haleyschool.uk/20.snail-bob/snail-bob/logo.png"
+      },
+      {
+        "name": "snail-bob-2",
+        "url": "http://4.haleyschool.uk/20.snail-bob/snail-bob-2/index.html",
+        "logo": "http://4.haleyschool.uk/20.snail-bob/snail-bob-2/logo.png"
+      },
+      {
+        "name": "snail-bob-3",
+        "url": "http://4.haleyschool.uk/20.snail-bob/snail-bob-3/index.html",
+        "logo": "http://4.haleyschool.uk/20.snail-bob/snail-bob-3/logo.png"
+      },
+      {
+        "name": "snail-bob-4",
+        "url": "http://4.haleyschool.uk/20.snail-bob/snail-bob-4/index.html",
+        "logo": "http://4.haleyschool.uk/20.snail-bob/snail-bob-4/logo.png"
+      },
+      {
+        "name": "snail-bob-5",
+        "url": "http://4.haleyschool.uk/20.snail-bob/snail-bob-5/index.html",
+        "logo": "http://4.haleyschool.uk/20.snail-bob/snail-bob-5/logo.png"
+      },
+      {
+        "name": "snail-bob-6",
+        "url": "http://4.haleyschool.uk/20.snail-bob/snail-bob-6/index.html",
+        "logo": "http://4.haleyschool.uk/20.snail-bob/snail-bob-6/logo.png"
+      },
+      {
+        "name": "snail-bob-7",
+        "url": "http://4.haleyschool.uk/20.snail-bob/snail-bob-7/index.html",
+        "logo": "http://4.haleyschool.uk/20.snail-bob/snail-bob-7/logo.png"
+      },
+      {
+        "name": "snail-bob-8",
+        "url": "http://4.haleyschool.uk/20.snail-bob/snail-bob-8/index.html",
+        "logo": "http://4.haleyschool.uk/20.snail-bob/snail-bob-8/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "snake",
+    "games": [
+      {
+        "name": "google-snake",
+        "url": "http://4.haleyschool.uk/21.snake/google-snake/index.html",
+        "logo": "http://4.haleyschool.uk/21.snake/google-snake/logo.png"
+      },
+      {
+        "name": "retro-snake",
+        "url": "http://4.haleyschool.uk/21.snake/retro-snake/index.html",
+        "logo": "http://4.haleyschool.uk/21.snake/retro-snake/logo.png"
+      },
+      {
+        "name": "snake-block",
+        "url": "http://4.haleyschool.uk/21.snake/snake-block/index.html",
+        "logo": "http://4.haleyschool.uk/21.snake/snake-block/logo.png"
+      },
+      {
+        "name": "snake-io",
+        "url": "http://4.haleyschool.uk/21.snake/snake-io/index.html",
+        "logo": "http://4.haleyschool.uk/21.snake/snake-io/logo.png"
+      },
+      {
+        "name": "snake-nokia",
+        "url": "http://4.haleyschool.uk/21.snake/snake-nokia/index.html",
+        "logo": "http://4.haleyschool.uk/21.snake/snake-nokia/logo.png"
+      },
+      {
+        "name": "snake",
+        "url": "http://4.haleyschool.uk/21.snake/snake/index.html",
+        "logo": "http://4.haleyschool.uk/21.snake/snake/logo.png"
+      },
+      {
+        "name": "snake3310",
+        "url": "http://4.haleyschool.uk/21.snake/snake3310/index.html",
+        "logo": "http://4.haleyschool.uk/21.snake/snake3310/logo.png"
+      },
+      {
+        "name": "snakeio",
+        "url": "http://4.haleyschool.uk/21.snake/snakeio/index.html",
+        "logo": "http://4.haleyschool.uk/21.snake/snakeio/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "soccer",
+    "games": [
+      {
+        "name": "SoccerHeads",
+        "url": "http://4.haleyschool.uk/22.soccer/SoccerHeads/index.html",
+        "logo": "http://4.haleyschool.uk/22.soccer/SoccerHeads/logo.png"
+      },
+      {
+        "name": "SoccerHeroes",
+        "url": "http://4.haleyschool.uk/22.soccer/SoccerHeroes/index.html",
+        "logo": "http://4.haleyschool.uk/22.soccer/SoccerHeroes/logo.png"
+      },
+      {
+        "name": "a-small-world-cup",
+        "url": "http://4.haleyschool.uk/22.soccer/a-small-world-cup/index.html",
+        "logo": "http://4.haleyschool.uk/22.soccer/a-small-world-cup/logo.png"
+      },
+      {
+        "name": "foosball",
+        "url": "http://4.haleyschool.uk/22.soccer/foosball/index.html",
+        "logo": "http://4.haleyschool.uk/22.soccer/foosball/logo.png"
+      },
+      {
+        "name": "rocket-soccer",
+        "url": "http://4.haleyschool.uk/22.soccer/rocket-soccer/index.html",
+        "logo": "http://4.haleyschool.uk/22.soccer/rocket-soccer/logo.png"
+      },
+      {
+        "name": "soccer-legends",
+        "url": "http://4.haleyschool.uk/22.soccer/soccer-legends/index.html",
+        "logo": "http://4.haleyschool.uk/22.soccer/soccer-legends/logo.png"
+      },
+      {
+        "name": "soccer-online",
+        "url": "http://4.haleyschool.uk/22.soccer/soccer-online/index.html",
+        "logo": "http://4.haleyschool.uk/22.soccer/soccer-online/logo.png"
+      },
+      {
+        "name": "soccer-skills",
+        "url": "http://4.haleyschool.uk/22.soccer/soccer-skills/index.html",
+        "logo": "http://4.haleyschool.uk/22.soccer/soccer-skills/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "stickman",
+    "games": [
+      {
+        "name": "stickjetchallenge",
+        "url": "http://4.haleyschool.uk/23.stickman/stickjetchallenge/index.html",
+        "logo": "http://4.haleyschool.uk/23.stickman/stickjetchallenge/logo.png"
+      },
+      {
+        "name": "stickman-boost",
+        "url": "http://4.haleyschool.uk/23.stickman/stickman-boost/index.html",
+        "logo": "http://4.haleyschool.uk/23.stickman/stickman-boost/logo.png"
+      },
+      {
+        "name": "stickman-climb",
+        "url": "http://4.haleyschool.uk/23.stickman/stickman-climb/index.html",
+        "logo": "http://4.haleyschool.uk/23.stickman/stickman-climb/logo.png"
+      },
+      {
+        "name": "stickman-golf",
+        "url": "http://4.haleyschool.uk/23.stickman/stickman-golf/index.html",
+        "logo": "http://4.haleyschool.uk/23.stickman/stickman-golf/logo.png"
+      },
+      {
+        "name": "stickman-hook",
+        "url": "http://4.haleyschool.uk/23.stickman/stickman-hook/index.html",
+        "logo": "http://4.haleyschool.uk/23.stickman/stickman-hook/logo.png"
+      },
+      {
+        "name": "stickman",
+        "url": "http://4.haleyschool.uk/23.stickman/stickman/index.html",
+        "logo": "http://4.haleyschool.uk/23.stickman/stickman/logo.png"
+      },
+      {
+        "name": "stickmanboost",
+        "url": "http://4.haleyschool.uk/23.stickman/stickmanboost/index.html",
+        "logo": "http://4.haleyschool.uk/23.stickman/stickmanboost/logo.png"
+      },
+      {
+        "name": "stickmanboost2",
+        "url": "http://4.haleyschool.uk/23.stickman/stickmanboost2/index.html",
+        "logo": "http://4.haleyschool.uk/23.stickman/stickmanboost2/logo.png"
+      },
+      {
+        "name": "stickmanepicbattle",
+        "url": "http://4.haleyschool.uk/23.stickman/stickmanepicbattle/index.html",
+        "logo": "http://4.haleyschool.uk/23.stickman/stickmanepicbattle/logo.png"
+      },
+      {
+        "name": "stickmanhook",
+        "url": "http://4.haleyschool.uk/23.stickman/stickmanhook/index.html",
+        "logo": "http://4.haleyschool.uk/23.stickman/stickmanhook/logo.png"
+      },
+      {
+        "name": "stickslasher",
+        "url": "http://4.haleyschool.uk/23.stickman/stickslasher/index.html",
+        "logo": "http://4.haleyschool.uk/23.stickman/stickslasher/logo.png"
+      },
+      {
+        "name": "stickwar",
+        "url": "http://4.haleyschool.uk/23.stickman/stickwar/index.html",
+        "logo": "http://4.haleyschool.uk/23.stickman/stickwar/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "subway-surfers",
+    "games": [
+      {
+        "name": "subway-surfers-san-francisco",
+        "url": "http://4.haleyschool.uk/24.subway-surfers/subway-surfers-san-francisco/index.html",
+        "logo": "http://4.haleyschool.uk/24.subway-surfers/subway-surfers-san-francisco/logo.png"
+      },
+      {
+        "name": "subway-surfers-sf",
+        "url": "http://4.haleyschool.uk/24.subway-surfers/subway-surfers-sf/index.html",
+        "logo": "http://4.haleyschool.uk/24.subway-surfers/subway-surfers-sf/logo.png"
+      },
+      {
+        "name": "subway-surfers-unity",
+        "url": "http://4.haleyschool.uk/24.subway-surfers/subway-surfers-unity/index.html",
+        "logo": "http://4.haleyschool.uk/24.subway-surfers/subway-surfers-unity/logo.png"
+      },
+      {
+        "name": "subway-surfers",
+        "url": "http://4.haleyschool.uk/24.subway-surfers/subway-surfers/index.html",
+        "logo": "http://4.haleyschool.uk/24.subway-surfers/subway-surfers/logo.png"
+      },
+      {
+        "name": "subwaysurfers",
+        "url": "http://4.haleyschool.uk/24.subway-surfers/subwaysurfers/index.html",
+        "logo": "http://4.haleyschool.uk/24.subway-surfers/subwaysurfers/logo.png"
+      },
+      {
+        "name": "subwaysurfersbali",
+        "url": "http://4.haleyschool.uk/24.subway-surfers/subwaysurfersbali/index.html",
+        "logo": "http://4.haleyschool.uk/24.subway-surfers/subwaysurfersbali/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "time-shooter",
+    "games": [
+      {
+        "name": "Time-Shooter-swat",
+        "url": "http://4.haleyschool.uk/25.time-shooter/Time-Shooter-swat/index.html",
+        "logo": "http://4.haleyschool.uk/25.time-shooter/Time-Shooter-swat/logo.png"
+      },
+      {
+        "name": "Time-Shooter",
+        "url": "http://4.haleyschool.uk/25.time-shooter/Time-Shooter/index.html",
+        "logo": "http://4.haleyschool.uk/25.time-shooter/Time-Shooter/logo.png"
+      },
+      {
+        "name": "time-shooter-2",
+        "url": "http://4.haleyschool.uk/25.time-shooter/time-shooter-2/index.html",
+        "logo": "http://4.haleyschool.uk/25.time-shooter/time-shooter-2/logo.png"
+      },
+      {
+        "name": "time-shooter-3",
+        "url": "http://4.haleyschool.uk/25.time-shooter/time-shooter-3/index.html",
+        "logo": "http://4.haleyschool.uk/25.time-shooter/time-shooter-3/logo.png"
+      },
+      {
+        "name": "timeshooter3swat",
+        "url": "http://4.haleyschool.uk/25.time-shooter/timeshooter3swat/index.html",
+        "logo": "http://4.haleyschool.uk/25.time-shooter/timeshooter3swat/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "vex",
+    "games": [
+      {
+        "name": "vex3",
+        "url": "http://4.haleyschool.uk/26.vex/vex3/index.html",
+        "logo": "http://4.haleyschool.uk/26.vex/vex3/logo.png"
+      },
+      {
+        "name": "vex4",
+        "url": "http://4.haleyschool.uk/26.vex/vex4/index.html",
+        "logo": "http://4.haleyschool.uk/26.vex/vex4/logo.png"
+      },
+      {
+        "name": "vex5",
+        "url": "http://4.haleyschool.uk/26.vex/vex5/index.html",
+        "logo": "http://4.haleyschool.uk/26.vex/vex5/logo.png"
+      },
+      {
+        "name": "vex6",
+        "url": "http://4.haleyschool.uk/26.vex/vex6/index.html",
+        "logo": "http://4.haleyschool.uk/26.vex/vex6/logo.png"
+      },
+      {
+        "name": "vex7",
+        "url": "http://4.haleyschool.uk/26.vex/vex7/index.html",
+        "logo": "http://4.haleyschool.uk/26.vex/vex7/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "wheely",
+    "games": [
+      {
+        "name": "wheely6",
+        "url": "http://4.haleyschool.uk/27.wheely/wheely6/index.html",
+        "logo": "http://4.haleyschool.uk/27.wheely/wheely6/logo.png"
+      },
+      {
+        "name": "wheely7",
+        "url": "http://4.haleyschool.uk/27.wheely/wheely7/index.html",
+        "logo": "http://4.haleyschool.uk/27.wheely/wheely7/logo.png"
+      },
+      {
+        "name": "wheely8",
+        "url": "http://4.haleyschool.uk/27.wheely/wheely8/index.html",
+        "logo": "http://4.haleyschool.uk/27.wheely/wheely8/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "papas-series",
+    "games": [
+      {
+        "name": "papas-pizzeria",
+        "url": "http://4.haleyschool.uk/28.papas-series/papas-pizzeria/index.html",
+        "logo": "http://4.haleyschool.uk/28.papas-series/papas-pizzeria/logo.png"
+      },
+      {
+        "name": "papasb",
+        "url": "http://4.haleyschool.uk/28.papas-series/papasb/index.html",
+        "logo": "http://4.haleyschool.uk/28.papas-series/papasb/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "puzzle-and-board",
+    "games": [
+      {
+        "name": "247-solitaire",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/247-solitaire/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/247-solitaire/logo.png"
+      },
+      {
+        "name": "ContreJour",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/ContreJour/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/ContreJour/logo.png"
+      },
+      {
+        "name": "ShapeFold4-000",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/ShapeFold4-000/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/ShapeFold4-000/logo.png"
+      },
+      {
+        "name": "ball-sort-puzzle",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/ball-sort-puzzle/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/ball-sort-puzzle/logo.png"
+      },
+      {
+        "name": "blacholesquare",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/blacholesquare/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/blacholesquare/logo.png"
+      },
+      {
+        "name": "block-the-pig",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/block-the-pig/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/block-the-pig/logo.png"
+      },
+      {
+        "name": "bloxors",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/bloxors/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/bloxors/logo.png"
+      },
+      {
+        "name": "breaklock",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/breaklock/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/breaklock/logo.png"
+      },
+      {
+        "name": "chess-online",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/chess-online/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/chess-online/logo.png"
+      },
+      {
+        "name": "circlo",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/circlo/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/circlo/logo.png"
+      },
+      {
+        "name": "connect3",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/connect3/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/connect3/logo.png"
+      },
+      {
+        "name": "dots-and-boxes",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/dots-and-boxes/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/dots-and-boxes/logo.png"
+      },
+      {
+        "name": "find-me",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/find-me/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/find-me/logo.png"
+      },
+      {
+        "name": "flashtetris",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/flashtetris/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/flashtetris/logo.png"
+      },
+      {
+        "name": "game-inside",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/game-inside/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/game-inside/logo.png"
+      },
+      {
+        "name": "hangman",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/hangman/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/hangman/logo.png"
+      },
+      {
+        "name": "hextris",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/hextris/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/hextris/logo.png"
+      },
+      {
+        "name": "home-pin-1-gh-pages",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/home-pin-1-gh-pages/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/home-pin-1-gh-pages/logo.png"
+      },
+      {
+        "name": "lines-to-fill",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/lines-to-fill/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/lines-to-fill/logo.png"
+      },
+      {
+        "name": "little-alchemy",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/little-alchemy/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/little-alchemy/logo.png"
+      },
+      {
+        "name": "mahjong",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/mahjong/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/mahjong/logo.png"
+      },
+      {
+        "name": "master-chess",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/master-chess/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/master-chess/logo.png"
+      },
+      {
+        "name": "minesweeper",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/minesweeper/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/minesweeper/logo.png"
+      },
+      {
+        "name": "ngon",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/ngon/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/ngon/logo.png"
+      },
+      {
+        "name": "onet-connect",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/onet-connect/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/onet-connect/logo.png"
+      },
+      {
+        "name": "peggle",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/peggle/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/peggle/logo.png"
+      },
+      {
+        "name": "penoire",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/penoire/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/penoire/logo.png"
+      },
+      {
+        "name": "pet-connect",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/pet-connect/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/pet-connect/logo.png"
+      },
+      {
+        "name": "poker",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/poker/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/poker/logo.png"
+      },
+      {
+        "name": "portal-flash",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/portal-flash/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/portal-flash/logo.png"
+      },
+      {
+        "name": "push",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/push/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/push/logo.png"
+      },
+      {
+        "name": "roots",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/roots/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/roots/logo.png"
+      },
+      {
+        "name": "solitaire",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/solitaire/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/solitaire/logo.png"
+      },
+      {
+        "name": "solitary",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/solitary/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/solitary/logo.png"
+      },
+      {
+        "name": "sudokunew4",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/sudokunew4/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/sudokunew4/logo.png"
+      },
+      {
+        "name": "superhero-drop-and-save-gh-pages",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/superhero-drop-and-save-gh-pages/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/superhero-drop-and-save-gh-pages/logo.png"
+      },
+      {
+        "name": "sushi-unroll",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/sushi-unroll/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/sushi-unroll/logo.png"
+      },
+      {
+        "name": "tetris",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/tetris/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/tetris/logo.png"
+      },
+      {
+        "name": "tiles-master",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/tiles-master/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/tiles-master/logo.png"
+      },
+      {
+        "name": "tinyfragments",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/tinyfragments/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/tinyfragments/logo.png"
+      },
+      {
+        "name": "uno",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/uno/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/uno/logo.png"
+      },
+      {
+        "name": "upleftout",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/upleftout/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/upleftout/logo.png"
+      },
+      {
+        "name": "word-search",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/word-search/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/word-search/logo.png"
+      },
+      {
+        "name": "wordle",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/wordle/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/wordle/logo.png"
+      },
+      {
+        "name": "worlde",
+        "url": "http://4.haleyschool.uk/29.puzzle-and-board/worlde/index.html",
+        "logo": "http://4.haleyschool.uk/29.puzzle-and-board/worlde/logo.png"
+      }
+    ]
+  }
+]

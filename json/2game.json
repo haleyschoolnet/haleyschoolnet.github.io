@@ -1,0 +1,517 @@
+[
+  {
+    "category": "basketball",
+    "games": [
+      {
+        "name": "2-player-head-basketball",
+        "url": "http://2.haleyschool.uk/3.basketball/2-player-head-basketball/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/2-player-head-basketball/logo.png"
+      },
+      {
+        "name": "ball-dunk-fall",
+        "url": "http://2.haleyschool.uk/3.basketball/ball-dunk-fall/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/ball-dunk-fall/logo.png"
+      },
+      {
+        "name": "basket-champs",
+        "url": "http://2.haleyschool.uk/3.basketball/basket-champs/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/basket-champs/logo.png"
+      },
+      {
+        "name": "basket-random",
+        "url": "http://2.haleyschool.uk/3.basketball/basket-random/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/basket-random/logo.png"
+      },
+      {
+        "name": "basket-slam-dunk",
+        "url": "http://2.haleyschool.uk/3.basketball/basket-slam-dunk/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/basket-slam-dunk/logo.png"
+      },
+      {
+        "name": "basketball-arcade",
+        "url": "http://2.haleyschool.uk/3.basketball/basketball-arcade/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/basketball-arcade/logo.png"
+      },
+      {
+        "name": "basketball-challenge",
+        "url": "http://2.haleyschool.uk/3.basketball/basketball-challenge/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/basketball-challenge/logo.png"
+      },
+      {
+        "name": "basketball-fever",
+        "url": "http://2.haleyschool.uk/3.basketball/basketball-fever/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/basketball-fever/logo.png"
+      },
+      {
+        "name": "basketball-kissing",
+        "url": "http://2.haleyschool.uk/3.basketball/basketball-kissing/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/basketball-kissing/logo.png"
+      },
+      {
+        "name": "basketball-legends-2020",
+        "url": "http://2.haleyschool.uk/3.basketball/basketball-legends-2020/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/basketball-legends-2020/logo.png"
+      },
+      {
+        "name": "basketball-shooting-stars",
+        "url": "http://2.haleyschool.uk/3.basketball/basketball-shooting-stars/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/basketball-shooting-stars/logo.png"
+      },
+      {
+        "name": "basketball-stars",
+        "url": "http://2.haleyschool.uk/3.basketball/basketball-stars/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/basketball-stars/logo.png"
+      },
+      {
+        "name": "basketball-street",
+        "url": "http://2.haleyschool.uk/3.basketball/basketball-street/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/basketball-street/logo.png"
+      },
+      {
+        "name": "basketball-swooshes",
+        "url": "http://2.haleyschool.uk/3.basketball/basketball-swooshes/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/basketball-swooshes/logo.png"
+      },
+      {
+        "name": "basketball.io-2.0-nba",
+        "url": "http://2.haleyschool.uk/3.basketball/basketball.io-2.0-nba/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/basketball.io-2.0-nba/logo.png"
+      },
+      {
+        "name": "gravity-linez",
+        "url": "http://2.haleyschool.uk/3.basketball/gravity-linez/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/gravity-linez/logo.png"
+      },
+      {
+        "name": "hoop-world-3d",
+        "url": "http://2.haleyschool.uk/3.basketball/hoop-world-3d/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/hoop-world-3d/logo.png"
+      },
+      {
+        "name": "jump-dunk",
+        "url": "http://2.haleyschool.uk/3.basketball/jump-dunk/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/jump-dunk/logo.png"
+      },
+      {
+        "name": "ragdoll-mega-dunk",
+        "url": "http://2.haleyschool.uk/3.basketball/ragdoll-mega-dunk/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/ragdoll-mega-dunk/logo.png"
+      },
+      {
+        "name": "shot-shot",
+        "url": "http://2.haleyschool.uk/3.basketball/shot-shot/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/shot-shot/logo.png"
+      },
+      {
+        "name": "taptap-shots",
+        "url": "http://2.haleyschool.uk/3.basketball/taptap-shots/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/taptap-shots/logo.png"
+      },
+      {
+        "name": "ultimate-swish-game",
+        "url": "http://2.haleyschool.uk/3.basketball/ultimate-swish-game/index.html",
+        "logo": "http://2.haleyschool.uk/3.basketball/ultimate-swish-game/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "golf",
+    "games": [
+      {
+        "name": "golf-orbit",
+        "url": "http://2.haleyschool.uk/4.golf/golf-orbit/index.html",
+        "logo": "http://2.haleyschool.uk/4.golf/golf-orbit/logo.png"
+      },
+      {
+        "name": "golf-pin",
+        "url": "http://2.haleyschool.uk/4.golf/golf-pin/index.html",
+        "logo": "http://2.haleyschool.uk/4.golf/golf-pin/logo.png"
+      },
+      {
+        "name": "infinity-golf",
+        "url": "http://2.haleyschool.uk/4.golf/infinity-golf/index.html",
+        "logo": "http://2.haleyschool.uk/4.golf/infinity-golf/logo.png"
+      },
+      {
+        "name": "mini-golf-saga",
+        "url": "http://2.haleyschool.uk/4.golf/mini-golf-saga/index.html",
+        "logo": "http://2.haleyschool.uk/4.golf/mini-golf-saga/logo.png"
+      },
+      {
+        "name": "minigolf-archipelago",
+        "url": "http://2.haleyschool.uk/4.golf/minigolf-archipelago/index.html",
+        "logo": "http://2.haleyschool.uk/4.golf/minigolf-archipelago/logo.png"
+      },
+      {
+        "name": "minigolf-clash",
+        "url": "http://2.haleyschool.uk/4.golf/minigolf-clash/index.html",
+        "logo": "http://2.haleyschool.uk/4.golf/minigolf-clash/logo.png"
+      },
+      {
+        "name": "pixel-mini-golf",
+        "url": "http://2.haleyschool.uk/4.golf/pixel-mini-golf/index.html",
+        "logo": "http://2.haleyschool.uk/4.golf/pixel-mini-golf/logo.png"
+      },
+      {
+        "name": "speedy-golf",
+        "url": "http://2.haleyschool.uk/4.golf/speedy-golf/index.html",
+        "logo": "http://2.haleyschool.uk/4.golf/speedy-golf/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "quiz",
+    "games": [
+      {
+        "name": "billionaires",
+        "url": "http://2.haleyschool.uk/5.quiz/billionaires/index.html",
+        "logo": "http://2.haleyschool.uk/5.quiz/billionaires/logo.png"
+      },
+      {
+        "name": "brain-challenge",
+        "url": "http://2.haleyschool.uk/5.quiz/brain-challenge/index.html",
+        "logo": "http://2.haleyschool.uk/5.quiz/brain-challenge/logo.png"
+      },
+      {
+        "name": "brain-iq-test-minecraft-quiz",
+        "url": "http://2.haleyschool.uk/5.quiz/brain-iq-test-minecraft-quiz/index.html",
+        "logo": "http://2.haleyschool.uk/5.quiz/brain-iq-test-minecraft-quiz/logo.png"
+      },
+      {
+        "name": "fantasy-math-number",
+        "url": "http://2.haleyschool.uk/5.quiz/fantasy-math-number/index.html",
+        "logo": "http://2.haleyschool.uk/5.quiz/fantasy-math-number/logo.png"
+      },
+      {
+        "name": "find-the-missing-part",
+        "url": "http://2.haleyschool.uk/5.quiz/find-the-missing-part/index.html",
+        "logo": "http://2.haleyschool.uk/5.quiz/find-the-missing-part/logo.png"
+      },
+      {
+        "name": "guess-their-answer",
+        "url": "http://2.haleyschool.uk/5.quiz/guess-their-answer/index.html",
+        "logo": "http://2.haleyschool.uk/5.quiz/guess-their-answer/logo.png"
+      },
+      {
+        "name": "pumpkin-patch",
+        "url": "http://2.haleyschool.uk/5.quiz/pumpkin-patch/index.html",
+        "logo": "http://2.haleyschool.uk/5.quiz/pumpkin-patch/logo.png"
+      },
+      {
+        "name": "quest-by-country",
+        "url": "http://2.haleyschool.uk/5.quiz/quest-by-country/index.html",
+        "logo": "http://2.haleyschool.uk/5.quiz/quest-by-country/logo.png"
+      },
+      {
+        "name": "sprunki-memory-card-match",
+        "url": "http://2.haleyschool.uk/5.quiz/sprunki-memory-card-match/index.html",
+        "logo": "http://2.haleyschool.uk/5.quiz/sprunki-memory-card-match/logo.png"
+      },
+      {
+        "name": "words-with-owl-1",
+        "url": "http://2.haleyschool.uk/5.quiz/words-with-owl-1/index.html",
+        "logo": "http://2.haleyschool.uk/5.quiz/words-with-owl-1/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "moto",
+    "games": [
+      {
+        "name": "cartoon-moto-stunt",
+        "url": "http://2.haleyschool.uk/6.moto/cartoon-moto-stunt/index.html",
+        "logo": "http://2.haleyschool.uk/6.moto/cartoon-moto-stunt/logo.png"
+      },
+      {
+        "name": "motor-tour",
+        "url": "http://2.haleyschool.uk/6.moto/motor-tour/index.html",
+        "logo": "http://2.haleyschool.uk/6.moto/motor-tour/logo.png"
+      },
+      {
+        "name": "stunt-bike-rider-bros",
+        "url": "http://2.haleyschool.uk/6.moto/stunt-bike-rider-bros/index.html",
+        "logo": "http://2.haleyschool.uk/6.moto/stunt-bike-rider-bros/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "educational",
+    "games": [
+      {
+        "name": "2-player-math",
+        "url": "http://2.haleyschool.uk/7.educational/2-player-math/index.html",
+        "logo": "http://2.haleyschool.uk/7.educational/2-player-math/logo.png"
+      },
+      {
+        "name": "fruit-paint",
+        "url": "http://2.haleyschool.uk/7.educational/fruit-paint/index.html",
+        "logo": "http://2.haleyschool.uk/7.educational/fruit-paint/logo.png"
+      },
+      {
+        "name": "kids-math",
+        "url": "http://2.haleyschool.uk/7.educational/kids-math/index.html",
+        "logo": "http://2.haleyschool.uk/7.educational/kids-math/logo.png"
+      },
+      {
+        "name": "riddlemath",
+        "url": "http://2.haleyschool.uk/7.educational/riddlemath/index.html",
+        "logo": "http://2.haleyschool.uk/7.educational/riddlemath/logo.png"
+      },
+      {
+        "name": "supermarket-cashier-simulator",
+        "url": "http://2.haleyschool.uk/7.educational/supermarket-cashier-simulator/index.html",
+        "logo": "http://2.haleyschool.uk/7.educational/supermarket-cashier-simulator/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "boardgames",
+    "games": [
+      {
+        "name": "bingo-revealer",
+        "url": "http://2.haleyschool.uk/8.boardgames/bingo-revealer/index.html",
+        "logo": "http://2.haleyschool.uk/8.boardgames/bingo-revealer/logo.png"
+      },
+      {
+        "name": "checkers-deluxe-edition",
+        "url": "http://2.haleyschool.uk/8.boardgames/checkers-deluxe-edition/index.html",
+        "logo": "http://2.haleyschool.uk/8.boardgames/checkers-deluxe-edition/logo.png"
+      },
+      {
+        "name": "classic-backgammon",
+        "url": "http://2.haleyschool.uk/8.boardgames/classic-backgammon/index.html",
+        "logo": "http://2.haleyschool.uk/8.boardgames/classic-backgammon/logo.png"
+      },
+      {
+        "name": "four-colors-multiplayer",
+        "url": "http://2.haleyschool.uk/8.boardgames/four-colors-multiplayer/index.html",
+        "logo": "http://2.haleyschool.uk/8.boardgames/four-colors-multiplayer/logo.png"
+      },
+      {
+        "name": "las-vegas-roulette",
+        "url": "http://2.haleyschool.uk/8.boardgames/las-vegas-roulette/index.html",
+        "logo": "http://2.haleyschool.uk/8.boardgames/las-vegas-roulette/logo.png"
+      },
+      {
+        "name": "mahjong-deluxe-plus",
+        "url": "http://2.haleyschool.uk/8.boardgames/mahjong-deluxe-plus/index.html",
+        "logo": "http://2.haleyschool.uk/8.boardgames/mahjong-deluxe-plus/logo.png"
+      },
+      {
+        "name": "parcheesi-deluxe",
+        "url": "http://2.haleyschool.uk/8.boardgames/parcheesi-deluxe/index.html",
+        "logo": "http://2.haleyschool.uk/8.boardgames/parcheesi-deluxe/logo.png"
+      },
+      {
+        "name": "poker-with-friends",
+        "url": "http://2.haleyschool.uk/8.boardgames/poker-with-friends/index.html",
+        "logo": "http://2.haleyschool.uk/8.boardgames/poker-with-friends/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "dressup",
+    "games": [
+      {
+        "name": "ellie-and-friends-venice-carnival",
+        "url": "http://2.haleyschool.uk/9.dressup/ellie-and-friends-venice-carnival/index.html",
+        "logo": "http://2.haleyschool.uk/9.dressup/ellie-and-friends-venice-carnival/logo.png"
+      },
+      {
+        "name": "kitty-couple-lovely-valentine",
+        "url": "http://2.haleyschool.uk/9.dressup/kitty-couple-lovely-valentine/index.html",
+        "logo": "http://2.haleyschool.uk/9.dressup/kitty-couple-lovely-valentine/logo.png"
+      },
+      {
+        "name": "lady-pool",
+        "url": "http://2.haleyschool.uk/9.dressup/lady-pool/index.html",
+        "logo": "http://2.haleyschool.uk/9.dressup/lady-pool/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "shotting",
+    "games": [
+      {
+        "name": "bank-robbery-3",
+        "url": "http://2.haleyschool.uk/10.shotting/bank-robbery-3/index.html",
+        "logo": "http://2.haleyschool.uk/10.shotting/bank-robbery-3/logo.png"
+      },
+      {
+        "name": "counter-craft-2-zombies",
+        "url": "http://2.haleyschool.uk/10.shotting/counter-craft-2-zombies/index.html",
+        "logo": "http://2.haleyschool.uk/10.shotting/counter-craft-2-zombies/logo.png"
+      },
+      {
+        "name": "counter-craft-sniper",
+        "url": "http://2.haleyschool.uk/10.shotting/counter-craft-sniper/index.html",
+        "logo": "http://2.haleyschool.uk/10.shotting/counter-craft-sniper/logo.png"
+      },
+      {
+        "name": "hazmob-fps",
+        "url": "http://2.haleyschool.uk/10.shotting/hazmob-fps/index.html",
+        "logo": "http://2.haleyschool.uk/10.shotting/hazmob-fps/logo.png"
+      },
+      {
+        "name": "poppy-strike-5",
+        "url": "http://2.haleyschool.uk/10.shotting/poppy-strike-5/index.html",
+        "logo": "http://2.haleyschool.uk/10.shotting/poppy-strike-5/logo.png"
+      },
+      {
+        "name": "skibidi-toilet-shooting",
+        "url": "http://2.haleyschool.uk/10.shotting/skibidi-toilet-shooting/index.html",
+        "logo": "http://2.haleyschool.uk/10.shotting/skibidi-toilet-shooting/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "battle",
+    "games": [
+      {
+        "name": "battleship-war-multiplayer",
+        "url": "http://2.haleyschool.uk/11.battle/battleship-war-multiplayer/index.html",
+        "logo": "http://2.haleyschool.uk/11.battle/battleship-war-multiplayer/logo.png"
+      },
+      {
+        "name": "fight-to-the-end",
+        "url": "http://2.haleyschool.uk/11.battle/fight-to-the-end/index.html",
+        "logo": "http://2.haleyschool.uk/11.battle/fight-to-the-end/logo.png"
+      },
+      {
+        "name": "funny-battle-simulator-2",
+        "url": "http://2.haleyschool.uk/11.battle/funny-battle-simulator-2/index.html",
+        "logo": "http://2.haleyschool.uk/11.battle/funny-battle-simulator-2/logo.png"
+      },
+      {
+        "name": "star-wing",
+        "url": "http://2.haleyschool.uk/11.battle/star-wing/index.html",
+        "logo": "http://2.haleyschool.uk/11.battle/star-wing/logo.png"
+      },
+      {
+        "name": "tank-fury-1",
+        "url": "http://2.haleyschool.uk/11.battle/tank-fury-1/index.html",
+        "logo": "http://2.haleyschool.uk/11.battle/tank-fury-1/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "multiplayer",
+    "games": [
+      {
+        "name": "extreme-blur-race",
+        "url": "http://2.haleyschool.uk/12.multiplayer/extreme-blur-race/index.html",
+        "logo": "http://2.haleyschool.uk/12.multiplayer/extreme-blur-race/logo.png"
+      },
+      {
+        "name": "extreme-runway-racing",
+        "url": "http://2.haleyschool.uk/12.multiplayer/extreme-runway-racing/index.html",
+        "logo": "http://2.haleyschool.uk/12.multiplayer/extreme-runway-racing/logo.png"
+      },
+      {
+        "name": "mini-rally-racing",
+        "url": "http://2.haleyschool.uk/12.multiplayer/mini-rally-racing/index.html",
+        "logo": "http://2.haleyschool.uk/12.multiplayer/mini-rally-racing/logo.png"
+      },
+      {
+        "name": "soccer-physics-2",
+        "url": "http://2.haleyschool.uk/12.multiplayer/soccer-physics-2/index.html",
+        "logo": "http://2.haleyschool.uk/12.multiplayer/soccer-physics-2/logo.png"
+      },
+      {
+        "name": "super-metal-wars",
+        "url": "http://2.haleyschool.uk/12.multiplayer/super-metal-wars/index.html",
+        "logo": "http://2.haleyschool.uk/12.multiplayer/super-metal-wars/logo.png"
+      },
+      {
+        "name": "volley-bean",
+        "url": "http://2.haleyschool.uk/12.multiplayer/volley-bean/index.html",
+        "logo": "http://2.haleyschool.uk/12.multiplayer/volley-bean/logo.png"
+      },
+      {
+        "name": "wrestle-jump-2",
+        "url": "http://2.haleyschool.uk/12.multiplayer/wrestle-jump-2/index.html",
+        "logo": "http://2.haleyschool.uk/12.multiplayer/wrestle-jump-2/logo.png"
+      }
+    ]
+  },
+  {
+    "category": "clicker",
+    "games": [
+      {
+        "name": "capybara-clicker",
+        "url": "http://2.haleyschool.uk/13.clicker/capybara-clicker/index.html",
+        "logo": "http://2.haleyschool.uk/13.clicker/capybara-clicker/logo.png"
+      },
+      {
+        "name": "capybara-coin-master",
+        "url": "http://2.haleyschool.uk/13.clicker/capybara-coin-master/index.html",
+        "logo": "http://2.haleyschool.uk/13.clicker/capybara-coin-master/logo.png"
+      },
+      {
+        "name": "chicken-banana-quest",
+        "url": "http://2.haleyschool.uk/13.clicker/chicken-banana-quest/index.html",
+        "logo": "http://2.haleyschool.uk/13.clicker/chicken-banana-quest/logo.png"
+      },
+      {
+        "name": "chill-clicker",
+        "url": "http://2.haleyschool.uk/13.clicker/chill-clicker/index.html",
+        "logo": "http://2.haleyschool.uk/13.clicker/chill-clicker/logo.png"
+      },
+      {
+        "name": "chill-girl-clicker",
+        "url": "http://2.haleyschool.uk/13.clicker/chill-girl-clicker/index.html",
+        "logo": "http://2.haleyschool.uk/13.clicker/chill-girl-clicker/logo.png"
+      },
+      {
+        "name": "cookie-clicker",
+        "url": "http://2.haleyschool.uk/13.clicker/cookie-clicker/index.html",
+        "logo": "http://2.haleyschool.uk/13.clicker/cookie-clicker/logo.png"
+      },
+      {
+        "name": "galaxy-clicker",
+        "url": "http://2.haleyschool.uk/13.clicker/galaxy-clicker/index.html",
+        "logo": "http://2.haleyschool.uk/13.clicker/galaxy-clicker/logo.png"
+      },
+      {
+        "name": "italian-brainrot-baby-clicker",
+        "url": "http://2.haleyschool.uk/13.clicker/italian-brainrot-baby-clicker/index.html",
+        "logo": "http://2.haleyschool.uk/13.clicker/italian-brainrot-baby-clicker/logo.png"
+      },
+      {
+        "name": "legend-of-fireball",
+        "url": "http://2.haleyschool.uk/13.clicker/legend-of-fireball/index.html",
+        "logo": "http://2.haleyschool.uk/13.clicker/legend-of-fireball/logo.png"
+      },
+      {
+        "name": "spacebar-clicker-main",
+        "url": "http://2.haleyschool.uk/13.clicker/spacebar-clicker-main/index.html",
+        "logo": "http://2.haleyschool.uk/13.clicker/spacebar-clicker-main/logo.png"
+      },
+      {
+        "name": "super-sprunki-clicker",
+        "url": "http://2.haleyschool.uk/13.clicker/super-sprunki-clicker/index.html",
+        "logo": "http://2.haleyschool.uk/13.clicker/super-sprunki-clicker/logo.png"
+      },
+      {
+        "name": "tap-car",
+        "url": "http://2.haleyschool.uk/13.clicker/tap-car/index.html",
+        "logo": "http://2.haleyschool.uk/13.clicker/tap-car/logo.png"
+      },
+      {
+        "name": "troll-the-teacher",
+        "url": "http://2.haleyschool.uk/13.clicker/troll-the-teacher/index.html",
+        "logo": "http://2.haleyschool.uk/13.clicker/troll-the-teacher/logo.png"
+      },
+      {
+        "name": "trump-clicker",
+        "url": "http://2.haleyschool.uk/13.clicker/trump-clicker/index.html",
+        "logo": "http://2.haleyschool.uk/13.clicker/trump-clicker/logo.png"
+      },
+      {
+        "name": "ytube-clicker",
+        "url": "http://2.haleyschool.uk/13.clicker/ytube-clicker/index.html",
+        "logo": "http://2.haleyschool.uk/13.clicker/ytube-clicker/logo.png"
+      }
+    ]
+  }
+]
