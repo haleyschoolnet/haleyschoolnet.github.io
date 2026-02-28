@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sperm Survivor: The Mad Seed 🚩</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="ui">
+            <div class="top-bar">
+                <div class="level-box">LEVEL: <span id="level">1</span></div>
+                <div class="score-box">KILLS: <span id="score">0</span></div>
+                <div class="health-container">
+                    <div id="health-bar"></div>
+                </div>
+            </div>
+            
+            <div id="boss-ui" style="display:none; text-align:center; padding: 10px;">
+                <div style="font-weight:900; color:#ff5252; margin-bottom:5px;">BOSS HEALTH</div>
+                <div class="boss-health-container" style="width:80%; height:12px; background:rgba(0,0,0,0.5); border-radius:10px; margin:0 auto; overflow:hidden; border:1px solid #ff5252;">
+                    <div id="boss-health-bar" style="width:100%; height:100%; background:#ff5252;"></div>
+                </div>
+            </div>
+            
+            <div id="powerup-status"></div>
+        </div>
+
+        <div id="start-screen" class="overlay">
+            <img src="logo.png" alt="Logo" class="main-logo">
+            <h1>SPERM SURVIVOR</h1>
+            <p>Move mouse to swim left/right!<br>Shoot seeds to make zombies <b>"pregnant"</b> until they pop!</p>
+            <button id="start-btn">START SURVIVAL</button>
+        </div>
+
+        <div id="game-over" class="overlay" style="display:none">
+            <h1>WASTED</h1>
+            <p id="final-stats"></p>
+            <button onclick="location.reload()">TRY AGAIN (FREE)</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

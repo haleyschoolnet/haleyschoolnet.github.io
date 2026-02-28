@@ -1,5 +1,20 @@
 [
     {
+        "name": "Sperm Survivor: The Mad Seed 🚩",
+        "logo": "trollgames/sperm-survivor/logo.png",
+        "iframe": "trollgames/sperm-survivor/index.html",
+        "category": "trending",
+        "badge": "Troll",
+        "tags": [
+            "troll",
+            "fun",
+            "zombie",
+            "survival",
+            "trollgames"
+        ],
+        "section": "dense"
+    },
+    {
         "name": "Archers Random",
         "logo": "https://1.haleyschool.uk/1.other/archers-random/logo.png",
         "iframe": "https://1.haleyschool.uk/1.other/archers-random/index.html",
