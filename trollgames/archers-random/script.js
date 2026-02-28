@@ -370,22 +370,22 @@ function createParticles(x, y, color, n=15) {
 }
 
 // --- Interaction ---
-canvas.addEventListener('mousedown', (e) => {
+function onStart(x, y) {
     if(gameState !== 'playing') return;
-    dragStart = { x: e.clientX, y: e.clientY };
+    dragStart = { x, y };
     currentDrag = { ...dragStart };
     isDragging = true;
-});
+}
 
-window.addEventListener('mousemove', (e) => {
-    if(isDragging) currentDrag = { x: e.clientX, y: e.clientY };
-});
+function onMove(x, y) {
+    if(isDragging) currentDrag = { x, y };
+}
 
-window.addEventListener('mouseup', (e) => {
+function onEnd(x, y) {
     if(!isDragging) return;
     isDragging = false;
-    const dx = dragStart.x - e.clientX;
-    const dy = dragStart.y - e.clientY;
+    const dx = dragStart.x - x;
+    const dy = dragStart.y - y;
     
     const power = Math.min(Math.hypot(dx, dy) * 0.056, 14);
     const angle = Math.atan2(dy, dx);
@@ -397,6 +397,30 @@ window.addEventListener('mouseup', (e) => {
         const spermConfig = trollObjects.find(o => o.type === 'sperm');
         projectiles.push(new Projectile(player.x, player.y - 40, vx, vy, 'player', spermConfig));
     }
+}
+
+// Mouse Listeners
+canvas.addEventListener('mousedown', (e) => onStart(e.clientX, e.clientY));
+window.addEventListener('mousemove', (e) => onMove(e.clientX, e.clientY));
+window.addEventListener('mouseup', (e) => onEnd(e.clientX, e.clientY));
+
+// Touch Listeners
+canvas.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    const touch = e.touches[0];
+    onStart(touch.clientX, touch.clientY);
+}, { passive: false });
+
+window.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+    const touch = e.touches[0];
+    onMove(touch.clientX, touch.clientY);
+}, { passive: false });
+
+window.addEventListener('touchend', (e) => {
+    // Note: touchend 'touches' list is empty, use 'changedTouches'
+    const touch = e.changedTouches[0];
+    onEnd(touch.clientX, touch.clientY);
 });
 
 function enemyBehavior() {
