@@ -12,6 +12,20 @@
         "section": "dense"
     },
     {
+        "name": "Archers: USA vs Cheap 🚩",
+        "logo": "https://1.haleyschool.uk/1.other/archers-random/logo.png",
+        "iframe": "trollgames/archers-random/index.html",
+        "category": "trending",
+        "badge": "Troll",
+        "tags": [
+            "troll",
+            "fun",
+            "archers",
+            "random"
+        ],
+        "section": "dense"
+    },
+    {
         "name": "Archery Ragdoll",
         "logo": "https://1.haleyschool.uk/1.other/archery-ragdoll/logo.png",
         "iframe": "https://1.haleyschool.uk/1.other/archery-ragdoll/index.html",

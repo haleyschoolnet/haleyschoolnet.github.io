@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archers: 1 VS 5 CHAOS 🚩</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-ui">
+        <div class="header">
+            <div class="player-hud">
+                <div class="name">YOU (BUDGET PRO)</div>
+                <div class="health-container">
+                    <div id="player-health" class="health-bar" style="width: 100%;"></div>
+                </div>
+            </div>
+            <div class="vs">SPERM VS DUREX</div>
+            <div class="player-hud enemy">
+                <div id="enemy-count" class="name">ENEMIES LEFT: 3</div>
+                <div class="health-container">
+                    <div id="enemy-total-health" class="health-bar" style="width: 100%; background: #e74c3c;"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="message-toast" style="display:none"></div>
+        
+
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="game-over" style="display: none;">
+        <h1 id="winner-text">GAME OVER</h1>
+        <p id="stats-text"></p>
+        <button onclick="location.reload()">TRY AGAIN (FREE TRIAL Ends Soon!)</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #0d1117;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    overflow: hidden;
+    user-select: none;
+    height: 100vh;
+    font-size: 16px;
+}
+
+#game-ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.player-hud {
+    width: 280px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 15px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.player-hud.enemy {
+    text-align: right;
+    border-color: rgba(231, 76, 60, 0.3);
+}
+
+.name {
+    font-size: 0.9rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #aaa;
+}
+
+.health-container {
+    height: 12px;
+    background: #111;
+    border: 2px solid #333;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.health-bar {
+    height: 100%;
+    background: linear-gradient(to right, #e74c3c, #ff7675);
+    transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#player-health {
+    background: linear-gradient(to right, #2ecc71, #55efc4);
+}
+
+.vs {
+    font-size: 5rem;
+    font-weight: 950;
+    color: #ffd700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 4px 4px 0px #000;
+    font-family: 'Impact', sans-serif;
+    font-style: italic;
+    transform: skewX(-10deg);
+    margin-top: 50px;
+}
+
+#message-toast {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 215, 0, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 900;
+    color: #ffd700;
+    border: 2px solid #ffd700;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    pointer-events: none;
+    z-index: 20;
+    white-space: nowrap;
+    animation: toastPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes toastPop {
+    from { transform: translateX(-50%) scale(0.5); opacity: 0; }
+    to { transform: translateX(-50%) scale(1); opacity: 1; }
+}
+
+.controls-hint {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+}
+
+#gameCanvas {
+    display: block;
+    background: linear-gradient(to bottom, #1a1e26, #2c3e50);
+}
+
+#game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.9);
+    padding: 50px;
+    border-radius: 20px;
+    border: 5px dashed red;
+    text-align: center;
+    z-index: 100;
+}
+
+#game-over h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+#game-over button {
+    padding: 15px 40px;
+    background: gold;
+    border: none;
+    border-radius: 50px;
+    font-weight: 900;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#game-over button:hover {
+    transform: scale(1.1);
+}
