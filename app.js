@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     function generateTags(data) {
         const blacklist = ["other", "otherseries", "3d", "2d", "index", "html", "uk", "haleyschool", "pages", "gh", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "trending", "small", "hero", "dense"];
         const heroTags = [
-            'action-and-combat', 'puzzle-and-board', 'platformer-and-adventure', 
+            'trollgames', 'action-and-combat', 'puzzle-and-board', 'platformer-and-adventure', 
             'runner-and-arcade', 'horror-and-survival', 'simulation-and-clicker', 
             'car-and-racing', 'soccer', 'basketball', 'shooting', 'multiplayer'
         ];
