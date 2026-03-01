@@ -1,5 +1,21 @@
 [
     {
+        "name": "Sperm Surfer: Canal Run 🚩",
+        "logo": "trollgames/sperm-surfer/logo.png",
+        "iframe": "trollgames/sperm-surfer/index.html",
+        "category": "trending",
+        "badge": "NEW",
+        "tags": [
+            "troll",
+            "fun",
+            "surfer",
+            "runner",
+            "sperm",
+            "trollgames"
+        ],
+        "section": "dense"
+    },
+    {
         "name": "Sperm Ninja: Seed Slicer 🚩",
         "logo": "trollgames/sperm-ninja/logo.png",
         "iframe": "trollgames/sperm-ninja/index.html",

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sperm Surfer: Canal Run 🚩</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- UI Overlay -->
+        <div id="ui-overlay">
+            <div class="score-container">
+                <span class="score-label">DNA COINS</span>
+                <span id="score-val">0</span>
+            </div>
+            <div id="high-score">Record: 0</div>
+        </div>
+
+        <!-- Start Menu -->
+        <div id="menu-overlay">
+            <div class="menu-card">
+                <img src="logo.png" alt="Sperm Surfer" class="menu-logo">
+                <h1>Sperm Surfer</h1>
+                <p>Survive the biological obstacles!</p>
+                <div class="controls-hint">
+                    <span><i class="fa-solid fa-arrow-left"></i> Left / Right <i class="fa-solid fa-arrow-right"></i></span>
+                    <br>
+                    <span><i class="fa-solid fa-arrow-up"></i> Jump / Slide <i class="fa-solid fa-arrow-down"></i></span>
+                </div>
+                <button id="start-btn">RUSH NOW</button>
+            </div>
+        </div>
+
+        <!-- Game Over Menu -->
+        <div id="game-over" style="display:none">
+            <div class="menu-card pulse">
+                <h2>GAME OVER!</h2>
+                <div class="final-score">You collected <span id="final-score-val">0</span> DNA strands</div>
+                <p>The mission failed... Try again!</p>
+                <button id="restart-btn">RESPAWN</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -399,8 +399,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     } catch (err) { console.error(err); }
 
-    // 6. Navigation Event Delegation
+    // 6. Navigation Event Delegation (Improved)
     document.addEventListener("click", (e) => {
+        // Handle Game Cards
         const card = e.target.closest(".game-card");
         if (card) {
             const game = gameDatabase.find(g => g.globalId == card.dataset.globalId);
@@ -408,22 +409,35 @@ document.addEventListener("DOMContentLoaded", async () => {
             return;
         }
 
-        const filterLink = e.target.closest(".menu-item, .grid-item, [data-filter], [data-tag]");
-        if (filterLink) {
+        // Handle Sidebar and Tags
+        const navEl = e.target.closest(".menu-item, .grid-item, .tag, [data-filter], [data-tag]");
+        if (navEl) {
             e.preventDefault();
-            const filter = filterLink.dataset.filter || filterLink.dataset.tag;
-            
+            const filter = navEl.dataset.filter;
+            const tag = navEl.dataset.tag;
+
+            // Update Active State for Sidebar Items
+            if (navEl.classList.contains("menu-item")) {
+                document.querySelectorAll(".sidebar .menu-item").forEach(el => el.classList.remove("active"));
+                navEl.classList.add("active");
+            }
+
             if (filter === 'all') {
                 renderGames(gameDatabase);
                 document.querySelectorAll(".game-section").forEach(s => s.style.display = "block");
                 const title = document.getElementById("section-title-trending");
                 if (title) title.innerHTML = `<i class="fa-solid fa-bolt" style="color:#ff5252"></i> Trending Games`;
                 window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else if (filter === 'trending') {
+                filterByTag('trending');
+            } else if (tag) {
+                filterByTag(tag);
             } else if (filter) {
                 filterByTag(filter);
             }
         }
 
+        // Random Button Specific
         const randBtn = e.target.closest("#random-game-btn");
         if (randBtn) {
             e.preventDefault();
