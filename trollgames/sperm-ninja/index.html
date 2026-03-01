@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sperm Ninja: Seed Slicer 🚩</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="ui">
+            <div class="score-container">
+                <span id="score">000</span>
+            </div>
+            <div class="lives-container" id="lives">
+                ❤️❤️❤️
+            </div>
+        </div>
+
+        <div id="start-screen" class="overlay">
+            <img src="logo.png" alt="Logo" class="main-logo">
+            <h1>SPERM NINJA</h1>
+            <p>Slice the Seeds! Avoid Durex Boxes!</p>
+            <button id="start-btn">READY TO SLICE</button>
+        </div>
+
+        <div id="game-over" class="overlay" style="display:none">
+            <h1>TERMINATED</h1>
+            <p>The campaign was stopped!</p>
+            <h2 id="final-score">SCORE: 0</h2>
+            <button onclick="location.reload()">REPLAY</button>
+        </div>
+        
+        <div id="combo-text"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,5 +1,20 @@
 [
     {
+        "name": "Sperm Ninja: Seed Slicer 🚩",
+        "logo": "trollgames/sperm-ninja/logo.png",
+        "iframe": "trollgames/sperm-ninja/index.html",
+        "category": "trending",
+        "badge": "Troll",
+        "tags": [
+            "troll",
+            "fun",
+            "ninja",
+            "slicing",
+            "trollgames"
+        ],
+        "section": "dense"
+    },
+    {
         "name": "Sperm Survivor: The Mad Seed 🚩",
         "logo": "trollgames/sperm-survivor/logo.png",
         "iframe": "trollgames/sperm-survivor/index.html",
@@ -4878,7 +4893,8 @@
         "tags": [
             "masked",
             "forces",
-            "action-and-combat"
+            "action-and-combat",
+            "shooter"
         ],
         "section": "dense"
     },
