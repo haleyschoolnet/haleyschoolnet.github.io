@@ -130,29 +130,40 @@ document.addEventListener("DOMContentLoaded", async () => {
         profileAvatar.src = randomGame.logo;
     }
 
-    // 2d. Notification System (Dynamic Simulation)
-    function updateNotifications(data, isRandom = false) {
+    // 2d. Notification System (Persistent & Dynamic)
+    function updateNotifications(data, forceRandom = false) {
         if (!notifList || !data.length) return;
+        
+        const NOTIF_KEY = "haley_notifications";
+        const TIME_KEY = "haley_notif_time";
+        const INTERVAL = 6 * 60 * 60 * 1000; // 6 Hours
+        
+        const now = Date.now();
+        const lastUpdate = parseInt(localStorage.getItem(TIME_KEY)) || 0;
+        const storedIds = JSON.parse(localStorage.getItem(NOTIF_KEY));
         
         let displayGames = [];
         const pool = data.filter(g => !g.__NOTE__);
 
-        if (isRandom) {
-            // Pick random 1-5 games from the pool
-            const count = Math.floor(Math.random() * 5) + 1;
+        // Check if we need to rotate (force or timeout or no data)
+        if (forceRandom || !storedIds || (now - lastUpdate > INTERVAL)) {
+            // Pick random 3-5 games to look like a real update
+            const count = Math.floor(Math.random() * 3) + 3; 
             const shuffled = [...pool].sort(() => 0.5 - Math.random());
             displayGames = shuffled.slice(0, count);
+            
+            // Save state
+            localStorage.setItem(NOTIF_KEY, JSON.stringify(displayGames.map(g => g.globalId)));
+            localStorage.setItem(TIME_KEY, now.toString());
+            
+            if (forceRandom && badge) {
+                badge.style.display = "block";
+                badge.style.animation = 'badge-pulse 2s infinite';
+            }
         } else {
-            // Initial load: show latest 5
-            displayGames = pool.slice(-5).reverse();
-        }
-
-        if (displayGames.length > 0 && badge) {
-            badge.style.display = "block";
-            // Trigger a quick pulse to show something changed
-            badge.style.animation = 'none';
-            badge.offsetHeight; // trigger reflow
-            badge.style.animation = 'badge-pulse 2s infinite';
+            // Load the "saved" notifications for this 6-hour window
+            displayGames = storedIds.map(id => data.find(g => g.globalId == id)).filter(Boolean);
+            if (displayGames.length === 0) displayGames = pool.slice(-5).reverse();
         }
 
         notifList.innerHTML = displayGames.map(game => `
@@ -181,7 +192,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (notifDropdown && !notifDropdown.classList.contains("active")) {
                 updateNotifications(gameDatabase, true);
             }
-        }, 10800000); // 3 hours in milliseconds
+        }, 21600000); // Correct 6 hours in milliseconds
     }
 
     function toggleNotif() {
