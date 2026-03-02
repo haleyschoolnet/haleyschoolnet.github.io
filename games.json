@@ -1,5 +1,38 @@
 [
     {
+        "name": "Sperm Dino: Run & Jump 🚩",
+        "logo": "trollgames/sperm-dino/logo.png",
+        "iframe": "trollgames/sperm-dino/index.html",
+        "category": "trending",
+        "badge": "NEW",
+        "tags": [
+            "troll",
+            "fun",
+            "dino",
+            "chrome",
+            "runner",
+            "sperm",
+            "trollgames"
+        ],
+        "section": "dense"
+    },
+    {
+        "name": "Sperm Bird: The Great Escape 🚩",
+        "logo": "trollgames/sperm-bird/logo.png",
+        "iframe": "trollgames/sperm-bird/index.html",
+        "category": "trending",
+        "badge": "NEW",
+        "tags": [
+            "troll",
+            "fun",
+            "bird",
+            "flappy",
+            "sperm",
+            "trollgames"
+        ],
+        "section": "dense"
+    },
+    {
         "name": "Sperm Surfer: Canal Run 🚩",
         "logo": "trollgames/sperm-surfer/logo.png",
         "iframe": "trollgames/sperm-surfer/index.html",
@@ -46,18 +79,6 @@
         "section": "dense"
     },
     {
-        "name": "Archers Random",
-        "logo": "https://1.haleyschool.uk/1.other/archers-random/logo.png",
-        "iframe": "https://1.haleyschool.uk/1.other/archers-random/index.html",
-        "category": "trending",
-        "tags": [
-            "archers",
-            "other",
-            "random"
-        ],
-        "section": "dense"
-    },
-    {
         "name": "Archers: Sperm vs Durex 🚩",
         "logo": "trollgames/archers-random/logo.png",
         "iframe": "trollgames/archers-random/index.html",
@@ -69,6 +90,18 @@
             "archers",
             "random",
             "trollgames"
+        ],
+        "section": "dense"
+    },
+    {
+        "name": "Archers Random",
+        "logo": "https://1.haleyschool.uk/1.other/archers-random/logo.png",
+        "iframe": "https://1.haleyschool.uk/1.other/archers-random/index.html",
+        "category": "trending",
+        "tags": [
+            "archers",
+            "other",
+            "random"
         ],
         "section": "dense"
     },

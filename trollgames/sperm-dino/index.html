@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sperm Dino: Run to Survive 🍆</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <div id="background-layer"></div>
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="ui">
+            <div class="score-container">
+                <span id="score-label">BABIES:</span>
+                <span id="score">00000</span>
+            </div>
+            <div id="high-score-container">
+                MOST: <span id="high-score">00000</span>
+            </div>
+        </div>
+
+        <div id="start-screen" class="overlay">
+            <div class="glow"></div>
+            <img src="assets/logo.png" alt="Sperm Dino Logo" class="floating-hero">
+            <h1>SPERM DINO</h1>
+            <p>Leap over the Durex barriers! Don't get blocked!</p>
+            <div class="controls-hint">
+                <span>TAP / SPACE TO JUMP</span><br>
+                <span>S / DOWN TO DUCK</span>
+            </div>
+            <button id="start-btn">START SPRINT</button>
+        </div>
+
+        <div id="game-over" class="overlay" style="display:none">
+            <h1>BLOCKED!</h1>
+            <p id="death-msg">Mission terminated by latex!</p>
+            <div class="final-stats">
+                <h2>BABIES: <span id="final-score">0</span></h2>
+                <h3>MOST: <span id="final-high-score">0</span></h3>
+            </div>
+            <button id="restart-btn">RETRY RUN</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

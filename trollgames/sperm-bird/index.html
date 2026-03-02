@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sperm Bird: The Great Escape 🍆</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <div id="background-layer"></div>
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="ui">
+            <div class="score-container">
+                <span id="score-label">BABIES:</span>
+                <span id="score">0</span>
+            </div>
+            <div id="high-score-container">
+                MOST: <span id="high-score">0</span>
+            </div>
+        </div>
+
+        <div id="start-screen" class="overlay">
+            <div class="glow"></div>
+            <img src="assets/logo_v3.png" alt="Sperm Bird Logo" class="floating-hero">
+            <h1>SPERM BIRD</h1>
+            <p>Avoid the Durex Walls! Escape at all costs!</p>
+            <div class="controls-hint">
+                <span>TAP / SPACE TO JUMP</span>
+            </div>
+            <button id="start-btn">BEGIN MISSION</button>
+        </div>
+
+        <div id="game-over" class="overlay" style="display:none">
+            <h1>MISSION FAILED</h1>
+            <p>You've been blocked!</p>
+            <div class="final-stats">
+                <h2>BABIES: <span id="final-score">0</span></h2>
+                <h3>MOST: <span id="final-high-score">0</span></h3>
+            </div>
+            <button id="restart-btn">RETRY CAMPAIGN</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
