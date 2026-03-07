@@ -354,8 +354,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const contentHTML = post.content.map(block => {
             if (block.type === "text") {
-                // Simple markdown-like heading support
-                const processedText = block.value.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+                // Simple markdown-like support
+                let processedText = block.value
+                    .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
                 return `<div class="content-text">${processedText}</div>`;
             }
             if (block.type === "image") return `
