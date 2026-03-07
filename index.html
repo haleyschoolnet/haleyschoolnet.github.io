@@ -140,6 +140,7 @@
                 <h4 class="menu-title">Browse</h4>
                 <a href="#" class="menu-item active" data-filter="all"><i class="fa-solid fa-house"></i> Home</a>
                 <a href="#" class="menu-item" data-filter="trending"><i class="fa-solid fa-fire-flame-curved"></i> Trending</a>
+                <a href="#" class="menu-item" data-filter="blog"><i class="fa-solid fa-newspaper"></i> Game News</a>
                 <a href="#" class="menu-item" id="random-game-btn"><i class="fa-solid fa-dice"></i> Random Play</a>
 
                 <h4 class="menu-title mt-4">Top Categories</h4>
@@ -239,6 +240,26 @@
                     <h2><i class="fa-solid fa-futbol" style="color:#2196f3"></i> Sports Arena</h2>
                 </div>
                 <div id="sports-grid-container" class="game-grid dense-grid"></div>
+            </section>
+
+            <!-- Blog List Section -->
+            <section class="game-section" id="section-blog" style="display:none">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-newspaper" style="color:var(--primary)"></i> Game News & Updates</h2>
+                </div>
+                <div id="blog-container" class="blog-grid">
+                    <!-- Dynamic -->
+                </div>
+            </section>
+
+            <!-- Article Reader Section -->
+            <section class="game-section" id="section-article" style="display:none">
+                <div class="article-nav" style="margin-bottom:30px">
+                    <button id="back-to-blog" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to News</button>
+                </div>
+                <div id="article-content" class="article-page">
+                    <!-- Dynamic -->
+                </div>
             </section>
 
         </main>

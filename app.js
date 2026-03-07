@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         "featured": document.getElementById("featured-grid-container"),
         "trending": document.getElementById("dense-grid-container"),
         "two-player": document.getElementById("two-player-grid-container"),
-        "sports": document.getElementById("sports-grid-container")
+        "sports": document.getElementById("sports-grid-container"),
+        "blog": document.getElementById("blog-container"),
+        "article": document.getElementById("article-content")
     };
 
     const searchInput = document.querySelector(".search-bar input");
@@ -56,6 +58,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const gameTray = document.getElementById("game-tray");
     
     let gameDatabase = [];
+    let postsDatabase = [];
     let gameInstances = {}; // globalId -> { container, gameData }
     let activeInstanceId = null;
 
@@ -286,7 +289,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     function renderGames(data, isFilter = false) {
-        Object.values(containers).forEach(c => { if(c) c.innerHTML = ""; });
+        // Only clear game containers, DO NOT clear blog or article containers
+        Object.keys(containers).forEach(key => { 
+            if(containers[key] && !["blog", "article"].includes(key)) containers[key].innerHTML = ""; 
+        });
+        
         const htmlBuffer = { "featured": [], "trending": [], "two-player": [], "sports": [] };
         
         data.forEach(game => {
@@ -300,7 +307,94 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
 
         Object.keys(containers).forEach(key => {
-            if (containers[key]) containers[key].innerHTML = htmlBuffer[key].join('');
+            if (containers[key] && !["blog", "article"].includes(key)) containers[key].innerHTML = htmlBuffer[key].join('');
+        });
+    }
+
+    // --- NEW: Blog & Article System ---
+    function renderBlogPosts(data) {
+        if (!containers["blog"]) return;
+        containers["blog"].innerHTML = data.map(post => `
+            <div class="blog-card" data-post-id="${post.id}">
+                <div class="blog-thumb" style="background-image: url('${post.thumbnail}')">
+                    <span class="blog-category">${post.category}</span>
+                </div>
+                <div class="blog-body">
+                    <span class="blog-date"><i class="fa-regular fa-calendar"></i> ${post.date}</span>
+                    <h3 class="blog-title">${post.title}</h3>
+                    <p class="blog-summary">${post.summary}</p>
+                </div>
+                <div class="blog-footer">
+                    <div class="blog-author">
+                        <img src="logo.png" style="width:24px; height:24px; border-radius:50%">
+                        <span>${post.author}</span>
+                    </div>
+                    <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        `).join('');
+
+        containers["blog"].querySelectorAll(".blog-card").forEach(card => {
+            card.addEventListener("click", (e) => {
+                e.preventDefault();
+                const post = postsDatabase.find(p => p.id === card.dataset.postId);
+                if (post) openBlogPost(post);
+            });
+        });
+    }
+
+    function openBlogPost(post) {
+        if (!containers["article"]) return;
+        
+        // Hide game sections, show article section
+        document.querySelectorAll(".game-section").forEach(s => s.style.display = "none");
+        const articleSection = document.getElementById("section-article");
+        if (articleSection) articleSection.style.display = "block";
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        const contentHTML = post.content.map(block => {
+            if (block.type === "text") {
+                // Simple markdown-like heading support
+                const processedText = block.value.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+                return `<div class="content-text">${processedText}</div>`;
+            }
+            if (block.type === "image") return `
+                <div class="content-image-wrapper">
+                    <img src="${block.value}" class="article-body-img">
+                    ${block.caption ? `<div class="image-caption">${block.caption}</div>` : ""}
+                </div>`;
+            return "";
+        }).join('');
+
+        containers["article"].innerHTML = `
+            <div class="article-header">
+                <div class="article-header-meta">
+                    <span class="blog-category">${post.category}</span>
+                    <span style="color:var(--text-muted); font-size:14px;"><i class="fa-regular fa-calendar"></i> ${post.date}</span>
+                </div>
+                <h1 class="article-title">${post.title}</h1>
+                <div class="article-author-box">
+                    <img src="logo.png" style="width:50px; height:50px; border-radius:50%; border: 2px solid var(--border-color);">
+                    <div>
+                        <div style="font-weight:800; font-size:18px;">${post.author}</div>
+                        <div style="font-size:14px; color:var(--text-muted);">Verified Author</div>
+                    </div>
+                </div>
+            </div>
+            <div class="article-body">
+                <img src="${post.thumbnail}" style="width:100%; height:450px; object-fit:cover; border-radius:24px; margin: 40px 0; border: 1px solid var(--border-color);">
+                ${contentHTML}
+            </div>`;
+    }
+
+    const backToBlogBtn = document.getElementById("back-to-blog");
+    if (backToBlogBtn) {
+        backToBlogBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelectorAll(".game-section").forEach(s => s.style.display = "none");
+            const blogSection = document.getElementById("section-blog");
+            if (blogSection) blogSection.style.display = "block";
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 
@@ -399,16 +493,47 @@ document.addEventListener("DOMContentLoaded", async () => {
         gameDatabase = rawData.map((g, i) => ({ ...g, globalId: i }));
         renderGames(gameDatabase);
         generateTags(gameDatabase);
-        randomizeAvatar(gameDatabase);
-        updateNotifications(gameDatabase);
+        // Start simulations
         startNotificationSimulation();
-        
-        const loadingScreen = document.getElementById("loading-screen");
-        if (loadingScreen) {
-            loadingScreen.style.opacity = "0";
-            setTimeout(() => { loadingScreen.style.display = "none"; }, 500);
+
+        // 1. Fetch Games Database
+        try {
+            const res = await fetch('games.json');
+            if (!res.ok) throw new Error("CORS or File Not Found");
+            const rawData = await res.json();
+            gameDatabase = rawData.map((g, i) => ({ ...g, globalId: i }));
+            renderGames(gameDatabase);
+            generateTags(gameDatabase);
+            randomizeAvatar(gameDatabase);
+            updateNotifications(gameDatabase);
+        } catch (err) {
+            console.error("Game data load failed:", err);
+            // Even if games fail, we still need to hide loading screen
         }
-    } catch (err) { console.error(err); }
+
+        // 2. Fetch Blog Database (Decoupled)
+        fetch('blog/posts.json')
+            .then(r => r.ok ? r.json() : [])
+            .then(data => {
+                postsDatabase = data;
+                if (postsDatabase.length > 0) renderBlogPosts(postsDatabase);
+            })
+            .catch(e => console.warn("Blog posts fetch blocked (CORS). Use a local server to view blog."));
+        
+        // Finalize
+        hideLoadingScreen();
+    } catch (err) { 
+        console.error("Master init failure:", err); 
+        hideLoadingScreen(); 
+    }
+
+    function hideLoadingScreen() {
+        const ls = document.getElementById("loading-screen");
+        if (ls) {
+            ls.style.opacity = "0";
+            setTimeout(() => { ls.style.display = "none"; }, 500);
+        }
+    }
 
     // 6. Navigation Event Delegation (Improved)
     document.addEventListener("click", (e) => {
@@ -436,11 +561,21 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (filter === 'all') {
                 renderGames(gameDatabase);
                 document.querySelectorAll(".game-section").forEach(s => s.style.display = "block");
+                // Reset blog/article visibility
+                if (document.getElementById("section-blog")) document.getElementById("section-blog").style.display = "none";
+                if (document.getElementById("section-article")) document.getElementById("section-article").style.display = "none";
+                
                 const title = document.getElementById("section-title-trending");
                 if (title) title.innerHTML = `<i class="fa-solid fa-bolt" style="color:#ff5252"></i> Trending Games`;
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             } else if (filter === 'trending') {
                 filterByTag('trending');
+            } else if (filter === 'blog') {
+                document.querySelectorAll(".game-section").forEach(s => s.style.display = "none");
+                const blogSection = document.getElementById("section-blog");
+                if (blogSection) blogSection.style.display = "block";
+                if (document.getElementById("section-article")) document.getElementById("section-article").style.display = "none";
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             } else if (tag) {
                 filterByTag(tag);
             } else if (filter) {
