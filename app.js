@@ -485,6 +485,14 @@ document.addEventListener("DOMContentLoaded", async () => {
                 e.preventDefault();
                 filterByTag(el.dataset.tag);
             }));
+
+            // Fix: Mouse wheel scroll horizontally
+            tagsContainer.addEventListener("wheel", (e) => {
+                if (e.deltaY !== 0) {
+                    e.preventDefault();
+                    tagsContainer.scrollLeft += e.deltaY;
+                }
+            }, { passive: false });
         }
     }
 
